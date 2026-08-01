@@ -16,6 +16,31 @@ from project.utils import (
 
 EPISODE_DATA_PATH = os.environ.get("EPISODE_DATA_PATH", "data.json")
 OUTPUT_HTML_PATH = os.environ.get("OUTPUT_HTML_PATH", "../assets/index.html")
+SITE_BASE_URL = os.environ.get("SITE_BASE_URL", "https://add-to-playlist.github.io/")
+GOOGLE_SITE_VERIFICATION_ID = os.environ.get("GOOGLE_SITE_VERIFICATION_ID")
+
+
+def canonical_url():
+    return SITE_BASE_URL.rstrip("/") + "/"
+
+
+def latest_broadcast_date(all_series: SeriesCollection):
+    return max(episode.broadcast for episode in all_series.episodes)[:10]
+
+
+def render_sibling_file(
+    env: Environment,
+    template_name: str,
+    file_name: str,
+    **context,
+):
+    """Render a template to a file alongside the output HTML."""
+    output = env.get_template(template_name).render(**context)
+
+    path = os.path.join(os.path.dirname(OUTPUT_HTML_PATH), file_name)
+
+    with open(path, mode="w", encoding="utf8") as f:
+        f.write(output)
 
 
 def load_series_data():
@@ -83,6 +108,8 @@ def main():
     output = template.render(
         all_series=all_series,
         all_series_playlist=ALL_PLAYLIST_ID,
+        canonical_url=canonical_url(),
+        og_image_url=canonical_url() + "images/icon.png",
         artist_leaderboard=artist_leaderboard,
         artist_leaderboard_amt=artist_leaderboard_amt,
         bar_chart_data=bar_chart_data,
@@ -102,6 +129,30 @@ def main():
 
     with open(OUTPUT_HTML_PATH, mode="w", encoding="utf8") as f:
         f.write(minified)
+
+    render_sibling_file(
+        env=env,
+        template_name="sitemap.j2",
+        file_name="sitemap.xml",
+        canonical_url=canonical_url(),
+        lastmod=latest_broadcast_date(all_series),
+    )
+
+    render_sibling_file(
+        env=env,
+        template_name="robots.j2",
+        file_name="robots.txt",
+        sitemap_url=canonical_url() + "sitemap.xml",
+    )
+
+    if GOOGLE_SITE_VERIFICATION_ID is not None:
+        file_name = f"google{GOOGLE_SITE_VERIFICATION_ID}.html"
+        render_sibling_file(
+            env=env,
+            template_name="google_verification.j2",
+            file_name=file_name,
+            verification_file_name=file_name,
+        )
 
 
 if __name__ == "__main__":

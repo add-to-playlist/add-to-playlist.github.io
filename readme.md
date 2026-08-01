@@ -4,7 +4,7 @@ This project compiles data from <a href="https://www.bbc.co.uk/programmes/m00106
 
 The data includes each track's name, artist(s), and—where available—links to Spotify or YouTube recordings. Some episode details and track relationships were curated manually, with later episodes assisted by AI transcription and analysis tools.
 
-For an interactive, full view of all series and tracks, visit the overview page on GitHub Pages [here](https://add-to-playlist.github.io/overview/).
+For an interactive, full view of all series and tracks, visit the overview page on GitHub Pages [here](https://add-to-playlist.github.io/).
 
 > [!IMPORTANT]
 > **Disclaimer**

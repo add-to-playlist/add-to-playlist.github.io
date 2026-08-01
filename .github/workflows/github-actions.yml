@@ -31,6 +31,7 @@ jobs:
         env:
           EPISODE_DATA_PATH: data.json
           OUTPUT_HTML_PATH: ../docs/index.html
+          GOOGLE_SITE_VERIFICATION_ID: ${{ vars.GOOGLE_SITE_VERIFICATION_ID }}
         run: |
           mkdir docs
           cd src

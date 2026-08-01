@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        {% set page_title = "Add to Playlist (BBC Radio 4) - Complete Song &amp; Track List" %}
+        {% set page_description = "Every song and track from BBC Radio 4's Add to Playlist. Browse all " ~ all_series|length ~ " series episode by episode, with links to Spotify and YouTube where available." %}
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Complete track listings for BBC Radio 4's Add to Playlist. Browse all episodes, artists, and series with links to Spotify and YouTube where available." />
+        <meta name="description" content="{{ page_description }}" />
         <meta name="keywords" content="Add to Playlist, BBC Radio 4, BBC Sounds, music playlist, track list, Spotify, YouTube, radio show, series playlists" />
+        <link rel="canonical" href="{{ canonical_url }}" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Add to Playlist Overview" />
+        <meta property="og:url" content="{{ canonical_url }}" />
+        <meta property="og:title" content="{{ page_title }}" />
+        <meta property="og:description" content="{{ page_description }}" />
+        <meta property="og:image" content="{{ og_image_url }}" />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta property="og:image:alt" content="Add to Playlist Overview icon" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="{{ page_title }}" />
+        <meta name="twitter:description" content="{{ page_description }}" />
+        <meta name="twitter:image" content="{{ og_image_url }}" />
+
         <link rel="icon" type="image/png" href="images/icon.png" />
         <link
             rel="stylesheet"
@@ -21,7 +40,7 @@
             referrerpolicy="no-referrer"
         >
         <link rel="stylesheet" href="styles.css?v={{ styles_hash }}" />
-        <title>Add to Playlist Overview</title>
+        <title>{{ page_title }}</title>
     </head>
     <body>
         <main class="container">
@@ -54,7 +73,7 @@
 
                 <p>Although care has been taken to make this page as accurate as possible, there will probably be a few mistakes; corrections are therefore very much welcomed!</p>
 
-                <p>Source: <a href="https://github.com/add-to-playlist/overview">https://github.com/add-to-playlist/overview</a></p>
+                <p>Source: <a href="https://github.com/add-to-playlist/add-to-playlist.github.io">https://github.com/add-to-playlist/add-to-playlist.github.io</a></p>
 
                 <p><small><em><strong>Disclaimer:</strong> this project is an independent compilation and analysis of Add to Playlist episodes. It is not affiliated with or endorsed by BBC.</em></small></p>
             </section>

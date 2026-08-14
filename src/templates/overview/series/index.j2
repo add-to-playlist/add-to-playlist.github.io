@@ -1,0 +1,110 @@
+{% extends "base.j2" %}
+{% import "icons.macro.j2" as icons %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>Series {{ series.number }}</li>
+        </ul>
+    </nav>
+
+    <hr />
+
+    <hgroup>
+        <div>
+            <h1>{{ PROGRAMME_NAME }}, series {{ series.number }}</h1>
+        </div>
+        <p>
+            {{ series | length }} episodes &middot;
+            {{ series.first_broadcast | date_format }} to {{ series.last_broadcast | date_format }}
+        </p>
+    </hgroup>
+
+    <dl class="facts">
+        <dt>Episodes</dt>
+        <dd>{{ series | length }}</dd>
+
+        <dt>Tracks</dt>
+        <dd>{{ series.track_count }}</dd>
+
+        <dt>Total running time</dt>
+        <dd>{{ series.duration_seconds | duration_format }}</dd>
+
+        <dt>Chosen by</dt>
+        <dd>{{ series.presenters | join(", ") }}</dd>
+
+        <dt>Playlist</dt>
+        <dd>
+            <a href="{{ series | get_playlist_url | spotify_playlist_url }}" target="_blank" rel="noopener">
+                The series {{ series.number }} playlist on Spotify
+            </a>
+        </dd>
+
+        {% if series.id is not none %}
+            <dt>Link</dt>
+            <dd>
+                <a href="{{ bbc_programme_url(series.id) }}" target="_blank" rel="noopener">
+                    Series {{ series.number }} on BBC Programmes
+                </a>
+            </dd>
+        {% endif %}
+    </dl>
+
+    <h2>Episodes</h2>
+
+    <div class="episode-list">
+        {% for episode in series %}
+            <article class="episode">
+                <div class="episode-number" aria-hidden="true">{{ episode.number }}</div>
+
+                <div class="episode-detail">
+                    <h3>
+                        <a href="/{{ episode_path(episode.series, episode.number) }}/">{{ episode.name }}</a>
+                    </h3>
+
+                    <p class="episode-meta">
+                        {{ episode.code }} &middot;
+                        <span title="{{ episode.broadcast }}">{{ episode.broadcast | date_format }}</span> &middot;
+                        {{ episode.track_count }} tracks &middot;
+                        {{ episode.duration_seconds | duration_format }}
+                        {%- if episode.one_off_special %} &middot; <mark>one-off special</mark>{% endif %}
+                    </p>
+
+                    {% if episode.description %}
+                        <p>{{ episode.description }}</p>
+                    {% endif %}
+
+                    {% if episode.has_episode_comments %}
+                        <p class="note">
+                            <span class="note-label">
+                                {{ icons.note() }}
+                                Note
+                            </span>
+                            {{ episode.comments }}
+                        </p>
+                    {% endif %}
+
+                    {% for track in episode %}
+                        {% if track.has_comments %}
+                            <p class="note">
+                                <span class="note-label">
+                                    {{ icons.note() }}
+                                    Note
+                                </span>
+                                Track {{ track.number }}, <em>{{ track.name }}</em>
+                                &ndash; {{ track.comments }}
+                            </p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+
+    <nav class="series-nav">
+        <ul>
+            <li><a href="/{{ TRACKS_PATH }}/">Every track from every episode</a></li>
+        </ul>
+    </nav>
+{% endblock %}

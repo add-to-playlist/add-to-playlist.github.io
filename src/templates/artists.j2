@@ -1,0 +1,34 @@
+{% extends "base.j2" %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>Artists</li>
+        </ul>
+    </nav>
+
+    <hr />
+
+    <hgroup>
+        <div>
+            <h1>Most-chosen artists</h1>
+        </div>
+        <p>
+            The {{ artist_leaderboard_amt }} artists who have appeared most often across
+            {{ all_series.episode_count }} episodes
+        </p>
+    </hgroup>
+
+    <p>Artists are ranked by how many of their tracks have been chosen. Where several artists are tied, they share a joint position.</p>
+
+    <section id="top-{{ artist_leaderboard_amt }}-artists-charts">
+        <h2>Top {{ artist_leaderboard_amt }} artists - charts</h2>
+
+        {% include "artist_charts.j2" %}
+    </section>
+
+    <section id="top-{{ artist_leaderboard_amt }}-artists-table">
+        {% include "top_artists.j2" %}
+    </section>
+{% endblock %}

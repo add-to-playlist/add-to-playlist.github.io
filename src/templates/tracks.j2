@@ -1,0 +1,59 @@
+{% extends "base.j2" %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>Every track</li>
+        </ul>
+    </nav>
+
+    <hr />
+
+    <hgroup>
+        <div>
+            <h1>Every track from every episode</h1>
+        </div>
+        <p>
+            All {{ all_series.track_count }} tracks across
+            {{ all_series.episode_count }} episodes and
+            {{ all_series | length }} series
+        </p>
+    </hgroup>
+
+    <p>Each episode's tracks are listed in the order they were chosen, with the connection to the previous track and who picked it. The chain of connections usually runs the length of a series, carrying over from one episode to the next, starting afresh with each new series.</p>
+
+    <p>An asterisk (*) next to an episode number marks a one-off special where the tracks do not connect to the previous and following episodes.</p>
+
+    <p>
+        <a href="{{ all_series_playlist | spotify_playlist_url }}" target="_blank" rel="noopener">The complete playlist on Spotify</a>
+        (excluding, of course, the small number of tracks that aren't available on their platform).
+    </p>
+
+    <section>
+        <h2>Contents</h2>
+
+        <ol>
+            <li>
+                <a href="#overview-all-series">Overview (all series)</a>
+            </li>
+            {% for series in all_series %}
+                <li>
+                    <a href="#series-{{ series.number }}">Series {{ series.number }}</a>
+                </li>
+            {% endfor %}
+        </ol>
+    </section>
+
+    <section id="overview-all-series">
+        <h2>Overview (all series)</h2>
+
+        {% include "overview_all_series.j2" %}
+    </section>
+
+    {% for series in all_series %}
+        <section id="series-{{ loop.index }}">
+            {% include "series_overview.j2" %}
+        </section>
+    {% endfor %}
+{% endblock %}

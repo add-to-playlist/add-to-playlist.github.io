@@ -1,3 +1,5 @@
+import os
+
 from collections import defaultdict
 
 from project.models import PresenterLeaderboardRow, SeriesCollection
@@ -33,6 +35,40 @@ def ordinal(n: int):
     else:
         suffix = ["th", "st", "nd", "rd", "th"][min(n % 10, 4)]
     return str(n) + suffix
+
+
+def get_page_build_path(
+    base_dir: str, *, series_number: int, episode_number: int | None = None
+):
+    paths = [base_dir, f"series-{series_number}"]
+
+    if episode_number is not None:
+        paths.append(f"episode-{episode_number}")
+
+    paths.append("index.html")
+
+    return os.path.join(*paths)
+
+
+def seconds_to_iso8601(total_seconds: int) -> str:
+    if total_seconds < 0:
+        raise ValueError("value must be non-negative")
+
+    hours, remainder = divmod(total_seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+
+    result = "PT"
+
+    if hours:
+        result += f"{hours}H"
+
+    if minutes:
+        result += f"{minutes}M"
+
+    if seconds or not (hours or minutes):
+        result += f"{seconds}S"
+
+    return result
 
 
 def get_rank_labels(leaderboard: list):

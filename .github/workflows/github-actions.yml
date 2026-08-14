@@ -4,7 +4,6 @@ on:
   push:
     branches: [main]
     paths:
-      - "assets/**"
       - "src/**"
       - "requirements.txt"
 
@@ -27,26 +26,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Render templates
+      - name: Render site
         env:
-          EPISODE_DATA_PATH: data.json
-          OUTPUT_HTML_PATH: ../docs/index.html
           GOOGLE_SITE_VERIFICATION_ID: ${{ vars.GOOGLE_SITE_VERIFICATION_ID }}
         run: |
-          mkdir docs
           cd src
           python render_templates.py
 
-      - name: Copy static assets
-        run: cp -r assets/* docs/
-
       - name: Disable Jekyll
-        run: touch docs/.nojekyll
+        run: touch build/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: build
 
   deploy:
     needs: build

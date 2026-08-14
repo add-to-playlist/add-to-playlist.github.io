@@ -25,7 +25,7 @@
     {% if episode.is_first %}
         <td rowspan="{{ series | length }}">
             <img
-                src="images/spotify.png"
+                src="{{ asset('images/spotify.png') }}"
                 height="16"
                 width="16"
                 alt="Spotify logo"
@@ -36,7 +36,7 @@
 
     <td>
         <img
-            src="images/bbc-sounds.png"
+            src="{{ asset('images/bbc-sounds.png') }}"
             height="16"
             width="16"
             alt="BBC Sounds logo"

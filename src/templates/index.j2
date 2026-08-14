@@ -1,141 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        {% set page_title = "Add to Playlist (BBC Radio 4) - Complete Song &amp; Track List" %}
-        {% set page_description = "Every song and track from BBC Radio 4's Add to Playlist. Browse all " ~ all_series|length ~ " series episode by episode, with links to Spotify and YouTube where available." %}
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="{{ page_description }}" />
-        <meta name="keywords" content="Add to Playlist, BBC Radio 4, BBC Sounds, music playlist, track list, Spotify, YouTube, radio show, series playlists" />
-        <link rel="canonical" href="{{ canonical_url }}" />
+{% extends "base.j2" %}
 
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Add to Playlist Overview" />
-        <meta property="og:url" content="{{ canonical_url }}" />
-        <meta property="og:title" content="{{ page_title }}" />
-        <meta property="og:description" content="{{ page_description }}" />
-        <meta property="og:image" content="{{ og_image_url }}" />
-        <meta property="og:image:width" content="512" />
-        <meta property="og:image:height" content="512" />
-        <meta property="og:image:alt" content="Add to Playlist Overview icon" />
+{% block content %}
+    <hgroup>
+        <div>
+            <h1>{{ PROGRAMME_NAME }}</h1>
+        </div>
+        <p>An independent catalogue of every track chosen on BBC Radio 4's {{ PROGRAMME_NAME }}</p>
+    </hgroup>
 
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="{{ page_title }}" />
-        <meta name="twitter:description" content="{{ page_description }}" />
-        <meta name="twitter:image" content="{{ og_image_url }}" />
+    <p><a href="{{ bbc_programme_url(PROGRAMME_ID) }}" target="_blank" rel="noopener">{{ PROGRAMME_NAME }}</a> is a BBC Radio 4 show in which the presenters and their guests choose and discuss several tracks, building a playlist in each episode. Each track picked is linked to the one before it, and the chain usually runs the length of a series, carrying over between episodes, and starting afresh for a new series or a one-off special.</p>
 
-        <link rel="icon" type="image/png" href="images/icon.png" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.min.css"
-            integrity="sha512-+4kjFgVD0n6H3xt19Ox84B56MoS7srFn60tgdWFuO4hemtjhySKyW4LnftYZn46k3THUEiTTsbVjrHai+0MOFw=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        >
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.colors.min.css"
-            integrity="sha512-fQonnXDPwZU4XnvoI+WMd8bHsn6aMCK5434kaGYc2o7J2RYOLUU5BFx9X+1nc8Mi4oYiYFoMmQmbLK7EMw39+A=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        >
-        <link rel="stylesheet" href="styles.css?v={{ styles_hash }}" />
-        <title>{{ page_title }}</title>
-    </head>
-    <body>
-        <main class="container">
-            <section>
-                <h1>Add to Playlist</h1>
+    <p>BBC Sounds lists each individual episode's tracks, but not each season or the series as a whole. This site compiles <em>all</em> of them into <a href="/{{ TRACKS_PATH }}/">one big list</a>, complete with the connection between each one, who chose it, and a link to Spotify or YouTube where available.</p>
 
-                <p>This is a repository containing data about <a href="https://www.bbc.co.uk/programmes/m00106lb" target="_blank">Add to Playlist</a> - a BBC Radio 4 show which selects and discusses several tracks for a "playlist" in each episode.</p>
+    <dl class="facts">
+        <dt>Series</dt>
+        <dd>{{ all_series | length }}</dd>
 
-                <p>While it's possible to view each <em>individual</em> episode's playlist tracks on the BBC Sounds website, it's not possible to view them all as one big list.</p>
+        <dt>Episodes</dt>
+        <dd>{{ all_series.episode_count }}</dd>
 
-                <p>The primary motivation of this project was to create such a list, which is displayed further down on this page.</p>
+        <dt>Tracks</dt>
+        <dd>{{ all_series.track_count }}</dd>
 
-                <p>As well as each track's name and artist(s), included where possible is a link to Spotify (or YouTube when the former is unavailable).</p>
+        <dt>Covering</dt>
+        <dd>
+            {{ all_series.first_broadcast | date_format }} to {{ all_series.last_broadcast | date_format }}
+        </dd>
 
-                <p>An asterisk (*) next to an episode number indicates a one-off special where the tracks do not connect to the previous/following episodes.</p>
+        <dt>Playlist</dt>
+        <dd>
+            <a href="{{ all_series_playlist | spotify_playlist_url }}" target="_blank" rel="noopener">
+                The complete playlist on Spotify
+            </a>
+        </dd>
+    </dl>
 
-                <p>Also included are links to several Spotify playlists: one playlist per series, and one big playlist for the entire series as a whole.</p>
-            </section>
+    <h2>Browse</h2>
 
-            <section>
-                <h3>About</h3>
+    <ul>
+        <li><a href="/{{ TRACKS_PATH }}/">Every track from every episode</a> - the complete list, by series and episode</li>
+        <li><a href="/{{ ARTISTS_PATH }}/">Most-chosen artists</a> - the top {{ artist_leaderboard_amt }}, as a table and charts</li>
+        <li><a href="/{{ PRESENTERS_PATH }}/">Presenters and guests</a> - who picked the most tracks</li>
+    </ul>
 
-                <p>Most of the data shown in the tables below was gathered automatically by scraping each episode's BBC Sounds page, parsing the HTML, then querying Spotify's Web API to find a recording.</p>
+    <h2>Series</h2>
 
-                <p>Due to the nature of Spotify's API, there may be slight inconsistencies between the Spotify link and the version of the track played in the show, e.g. a remixed version may appear before the original version in Spotify's search results.</p>
+    <ul class="series-index">
+        {% for series in all_series %}
+            <li>
+                <a href="/{{ series_path(series.number) }}/">Series {{ series.number }}</a>
+                -
+                <small>
+                    {{ series | length }} episodes,
+                    {{ series.track_count }} tracks,
+                    {{ series.first_broadcast | date_format }}
+                </small>
+            </li>
+        {% endfor %}
+    </ul>
 
-                <p>Care has been taken, however, to find the exact recordings used in the show where possible (by using music identification software such as Shazam and SoundHound).</p>
+    <h2>About this project</h2>
 
-                <p>The descriptions of how the tracks relate to each other were written manually up until series 4, episode 7, when AI was used to speed up the process - first, using <a href="https://github.com/openai/whisper" target="_blank">Whisper</a> to create transcripts of each episode, then uploading the transcripts to <a href="https://claude.ai/" target="_blank">Claude</a> and <a href="https://chat.deepseek.com/" target="_blank">DeepSeek</a> for analysis. Finally, the AI output was reviewed, corrected when needed, and then added to the tables.</p>
+    <p>Most of the data was gathered automatically by scraping each episode's BBC Sounds page, parsing the HTML, then querying Spotify's Web API to find a recording. Because of how that search behaves, there may be slight inconsistencies between the Spotify link and the version played on the show - e.g. a remix appearing ahead of the original. Care has been taken to identify the exact recordings where possible, using music identification software such as Shazam and SoundHound.</p>
 
-                <p>Although care has been taken to make this page as accurate as possible, there will probably be a few mistakes; corrections are therefore very much welcomed!</p>
+    <p>The descriptions of how tracks relate to each other were written manually up to series 4, episode 7. After that, AI was used to speed up the process: <a href="https://github.com/openai/whisper" target="_blank" rel="noopener">Whisper</a> to transcribe each episode, then <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a> and <a href="https://chat.deepseek.com/" target="_blank" rel="noopener">DeepSeek</a> to analyse the transcripts. The output was reviewed and corrected before being added.</p>
 
-                <p>Source: <a href="https://github.com/add-to-playlist/add-to-playlist.github.io">https://github.com/add-to-playlist/add-to-playlist.github.io</a></p>
+    <p>Although care has been taken, there will probably be a few mistakes; corrections are therefore very much welcomed!</p>
 
-                <p><small><em><strong>Disclaimer:</strong> this project is an independent compilation and analysis of Add to Playlist episodes. It is not affiliated with or endorsed by BBC.</em></small></p>
-            </section>
+    <p>Source: <a href="https://github.com/add-to-playlist/add-to-playlist.github.io">github.com/add-to-playlist/add-to-playlist.github.io</a></p>
 
-            <section>
-                <h3>Contents</h3>
-
-                <ol>
-                    <li>
-                        <a href="#overview-all-series">Overview (all series)</a>
-                    </li>
-                    <li>
-                        <a href="#top-{{ artist_leaderboard_amt }}-artists-table">Top {{ artist_leaderboard_amt }} artists - table</a>
-                    </li>
-                    <li>
-                        <a href="#top-{{ artist_leaderboard_amt }}-artists-charts">Top {{ artist_leaderboard_amt }} artists - charts</a>
-                    </li>
-                    <li>
-                        <a href="#top-{{ presenter_leaderboard_amt }}-presenters">Top {{ presenter_leaderboard_amt }} presenters by tracks picked</a>
-                    </li>
-                    {% for series in all_series %}
-                        <li>
-                            <a href="#series-{{ loop.index }}">Series {{ loop.index }}</a>
-                        </li>
-                    {% endfor %}
-                </ol>
-            </section>
-
-            <section id="overview-all-series">
-                <h2>Overview (all series)</h2>
-
-                <p>A Spotify playlist containing every track chosen in the series so far can be found <a href="{{ all_series_playlist | spotify_playlist_url }}" target="_blank">here</a> (excluding, of course, the small number of tracks that aren't available on Spotify).</p>
-
-                {% include "overview_all_series.j2" %}
-            </section>
-
-            <section id="top-{{ artist_leaderboard_amt }}-artists-table">
-                {% include "top_artists.j2" %}
-            </section>
-
-            <section id="top-{{ artist_leaderboard_amt }}-artists-charts">
-                <h2>Top {{ artist_leaderboard_amt }} artists - charts</h2>
-
-                {% include "artist_charts.j2" %}
-            </section>
-
-            <section id="top-{{ presenter_leaderboard_amt }}-presenters">
-                {% include "top_presenters.j2" %}
-            </section>
-
-            {% for series in all_series %}
-                <section id="series-{{ loop.index }}">
-                    {% include "series_overview.j2" %}
-                </section>
-            {% endfor %}
-        </main>
-        <script>
-            if (window.matchMedia) {
-                const m = window.matchMedia('(prefers-color-scheme: dark)');
-                document.body.setAttribute('data-bs-theme', m.matches ? 'dark' : 'light');
-                m.addEventListener('change', e => document.body.setAttribute('data-bs-theme', e.matches ? 'dark' : 'light'));
-            }
-        </script>
-    </body>
-</html>
+    <p>
+        <small>
+            <em>
+                <strong>Disclaimer:</strong> this project is an independent compilation and
+                analysis of {{ PROGRAMME_NAME }} episodes. It is not affiliated with or
+                endorsed by the BBC.
+            </em>
+        </small>
+    </p>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.j2" %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>Presenters</li>
+        </ul>
+    </nav>
+
+    <hr />
+
+    <hgroup>
+        <div>
+            <h1>Presenters and guests</h1>
+        </div>
+    </hgroup>
+
+    <p>The show's regular presenters appear alongside the guests who join them each episode. Each pick below links to the track that was chosen.</p>
+
+    <section id="top-{{ presenter_leaderboard_amt }}-presenters">
+        {% include "top_presenters.j2" %}
+    </section>
+{% endblock %}

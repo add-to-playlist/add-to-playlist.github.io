@@ -1,7 +1,11 @@
 from datetime import datetime
 
 from project.models import Series, Track
+from project.urls import spotify_playlist_url, spotify_track_url
 from project.utils import SERIES_PLAYLIST_IDS
+
+
+class MediaLinkException(Exception): ...
 
 
 def date_format(value: str):
@@ -9,21 +13,41 @@ def date_format(value: str):
     return f"{dt.day} {dt.strftime('%B %Y')}"
 
 
+def month_year_format(value: str):
+    return datetime.fromisoformat(value).strftime("%B %Y")
+
+
+def join_names(names: list[str], conjunction: str = "and"):
+    if not names:
+        return ""
+
+    if len(names) <= 2:
+        return f" {conjunction} ".join(names)
+
+    return f"{', '.join(names[:-1])}, {conjunction} {names[-1]}"
+
+
+def duration_format(total_seconds: int):
+    hours, remainder = divmod(total_seconds, 3600)
+    minutes = remainder // 60
+
+    if hours == 0:
+        return f"{minutes} minutes"
+
+    return f"{hours} hours {minutes} minutes"
+
+
 def get_playlist_url(series: Series):
     return SERIES_PLAYLIST_IDS[series.number - 1]
 
 
-def spotify_playlist_url(value: str):
-    return f"https://open.spotify.com/playlist/{value}"
-
-
 def media_link(track: Track):
     if track.spotify_id is not None:
-        return f"https://open.spotify.com/track/{track.spotify_id}"
+        return spotify_track_url(track.spotify_id)
     elif track.youtube is not None:
         return track.youtube
     else:
-        raise Exception("Unknown media link")
+        raise MediaLinkException("Unknown media link")
 
 
 def table_class_name(number: int):
@@ -32,8 +56,11 @@ def table_class_name(number: int):
 
 filters = {
     "date_format": date_format,
+    "duration_format": duration_format,
     "get_playlist_url": get_playlist_url,
+    "join_names": join_names,
     "media_link": media_link,
+    "month_year_format": month_year_format,
     "spotify_playlist_url": spotify_playlist_url,
     "table_class_name": table_class_name,
 }

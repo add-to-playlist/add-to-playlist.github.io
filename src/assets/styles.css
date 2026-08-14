@@ -1,0 +1,139 @@
+:root {
+    --pico-block-spacing-vertical: 2rem;
+}
+@media (max-width: 575px) {
+    :root {
+        --pico-font-size: 106.25%;
+    }
+}
+.table-warning {
+    background-color: var(--pico-color-amber-150) !important;
+}
+@media only screen and (prefers-color-scheme: dark) {
+    .table-warning {
+        background-color: var(--pico-color-amber-600) !important;
+    }
+}
+/* Unfortunately necessary to properly handle rowspan elements */
+.td-odd {
+    background-color: var(--pico-table-row-stripped-background-color) !important;
+}
+.td-even {
+    background-color: var(--pico-background-color) !important;
+}
+.chart-wrapper > div:not(:last-child) {
+    margin-bottom: var(--pico-block-spacing-vertical);
+}
+/* Series and episode pages */
+.facts {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0 1.5rem;
+}
+.facts :is(dt, dd) {
+    border-bottom: var(--pico-border-width) solid var(--pico-muted-border-color);
+    margin: 0;
+    padding: 0.5rem 0;
+}
+.facts dt {
+    color: var(--pico-muted-color);
+}
+.episode {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+.episode-number {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    border-radius: var(--pico-border-radius);
+    background-color: var(--pico-muted-border-color);
+    color: var(--pico-muted-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.episode-detail > :is(h3, p) {
+    margin-bottom: 0.5rem;
+}
+.episode-detail h3 {
+    font-size: 1.15rem;
+}
+.episode-detail > p:last-child {
+    margin-bottom: 0;
+}
+.episode-meta {
+    color: var(--pico-muted-color);
+    font-size: 0.875em;
+}
+.track {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+.track img,
+.track-artwork-placeholder {
+    border-radius: var(--pico-border-radius);
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+}
+.track-artwork-placeholder {
+    display: grid;
+    place-items: center;
+    background-color: var(--pico-muted-border-color);
+    color: var(--pico-muted-color);
+    font-size: 1.5rem;
+}
+.track-detail > :is(h3, p) {
+    margin-bottom: 0.5rem;
+}
+.track-detail h3 {
+    font-size: 1.15rem;
+}
+.track-artists {
+    color: var(--pico-muted-color);
+}
+.track-connection,
+.note {
+    border-left: 0.25rem solid var(--pico-primary-border);
+    padding-left: 0.75rem;
+}
+.note {
+    border-left-color: var(--pico-muted-border-color);
+}
+.track-connection-label,
+.note-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-right: 0.4rem;
+    color: var(--pico-muted-color);
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.track-connection-label svg,
+.note-label svg {
+    width: 1.2em;
+    height: 1.2em;
+}
+.track-detail footer {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+@media (max-width: 576px) {
+    .track {
+        grid-template-columns: 4rem 1fr;
+        gap: 0.75rem;
+    }
+}
+.tall-chart {
+    min-height: 1024px;
+}

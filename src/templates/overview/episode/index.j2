@@ -1,0 +1,139 @@
+{% extends "base.j2" %}
+{% import "icons.macro.j2" as icons %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/{{ series_path(episode.series) }}/">Series {{ episode.series }}</a></li>
+            <li>Episode {{ episode.number }}</li>
+        </ul>
+    </nav>
+
+    <hr />
+
+    <hgroup>
+        <div>
+            <h1>{{ episode.name }}</h1>
+        </div>
+        <p>
+            Series {{ episode.series }}, episode {{ episode.number }} &middot; {{ episode.code }}
+            {%- if episode.one_off_special %} &middot; <mark>one-off special</mark>{% endif %}
+        </p>
+    </hgroup>
+
+    <dl class="facts">
+        <dt>Description</dt>
+        <dd>{{ episode.description }}</dd>
+
+        <dt>First broadcast</dt>
+        <dd>
+            <span title="{{ episode.broadcast }}">
+                {{ episode.broadcast | date_format }}
+            </span>
+        </dd>
+
+        <dt>On BBC Sounds from</dt>
+        <dd>
+            <span title="{{ episode.released }}">
+                {{ episode.released | date_format }}
+            </span>
+        </dd>
+
+        <dt>Duration</dt>
+        <dd>{{ episode.duration_seconds | duration_format }}</dd>
+
+        <dt>Tracks</dt>
+        <dd>{{ episode.track_count }}</dd>
+
+        <dt>Link</dt>
+        <dd>
+            <a href="{{ episode.url }}" target="_blank" rel="noopener">Episode page on BBC Programmes</a>
+        </dd>
+    </dl>
+
+    {% if episode.has_episode_comments %}
+        <p class="note">
+            <span class="note-label">
+                {{ icons.note() }}
+                Note
+            </span>
+            {{ episode.comments }}
+        </p>
+    {% endif %}
+
+    <h2>Tracks chosen</h2>
+    <div class="track-list">
+        {% for track in episode %}
+            <article class="track">
+                {% set artwork = track.artwork_url(300) %}
+                {% if artwork is not none %}
+                    <img
+                        src="{{ artwork }}"
+                        alt="Album artwork for {{ track.name }}"
+                        width="300"
+                        height="300"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    />
+                {% else %}
+                    <div class="track-artwork-placeholder" aria-hidden="true">
+                        {{ track.number }}
+                    </div>
+                {% endif %}
+
+                <div class="track-detail">
+                    <h3>
+                        {{ track.number }}.
+                        {% if track.has_media_link %}
+                            <a href="{{ track | media_link }}" target="_blank" rel="noopener">{{ track.name }}</a>
+                        {% else %}
+                            {{ track.name }}
+                        {% endif %}
+                    </h3>
+
+                    <p class="track-artists">
+                        {% if track.artists is not none %}
+                            {{ track.artists | join(", ") }}
+                        {% else %}
+                            <em>Artist n/a</em>
+                        {% endif %}
+                    </p>
+
+                    {% if track.connection is not none %}
+                        <p class="track-connection">
+                            <span class="track-connection-label">
+                                {{ icons.connection() }}
+                                Connection
+                            </span>
+                            {{ track.connection }}
+                        </p>
+                    {% endif %}
+
+                    {% if track.has_comments %}
+                        <p class="note">
+                            <span class="note-label">
+                                {{ icons.note() }}
+                                Note
+                            </span>
+                            {{ track.comments }}
+                        </p>
+                    {% endif %}
+
+                    <footer>
+                        <small>
+                            Chosen by {{ track.chosen_by }}
+                        </small>
+                    </footer>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+
+    <nav class="episode-nav">
+        <ul>
+            <li><a href="/{{ series_path(episode.series) }}/">All of series {{ episode.series }}</a></li>
+            <li><a href="/{{ TRACKS_PATH }}/">Every track from every episode</a></li>
+        </ul>
+    </nav>
+{% endblock %}

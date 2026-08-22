@@ -384,7 +384,12 @@ def render_page(
     )
 
     if not skip_minify:
-        output = minify_html.minify(code=output, minify_js=True)
+        output = minify_html.minify(
+            code=output,
+            minify_js=True,
+            keep_html_and_head_opening_tags=True,
+            keep_closing_tags=True,
+        )
 
     os.makedirs(name=output_dir, exist_ok=True)
 

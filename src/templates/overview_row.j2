@@ -11,8 +11,8 @@
 
     <td>{{ ns.ep_number_overall }}</td>
 
-    {% if episode.one_off_special %}
-        <td title="This episode was a one-off special." class="table-warning">
+    {% if episode.is_standalone %}
+        <td title="This was a stand-alone episode." class="table-warning">
             {{ episode.number }}*
         </td>
     {% else %}

@@ -125,7 +125,7 @@ class Episode:
     name: str
     description: str
     image: str
-    one_off_special: bool = False
+    is_standalone: bool = False
     comments: str | None = None
 
     @classmethod
@@ -146,7 +146,7 @@ class Episode:
             name=data["name"],
             description=data["description"],
             image=data["image"],
-            one_off_special=data.get("one_off_special", False),
+            is_standalone=data.get("is_standalone", False),
             comments=data.get("comments"),
         )
 

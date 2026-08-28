@@ -18,7 +18,7 @@
         </div>
         <p>
             Series {{ episode.series }}, episode {{ episode.number }} &middot; {{ episode.code }}
-            {%- if episode.one_off_special %} &middot; <mark>one-off special</mark>{% endif %}
+            {%- if episode.is_standalone %} &middot; <mark>stand-alone episode</mark>{% endif %}
         </p>
     </hgroup>
 

@@ -68,7 +68,7 @@
                         <span title="{{ episode.broadcast }}">{{ episode.broadcast | date_format }}</span> &middot;
                         {{ episode.track_count }} tracks &middot;
                         {{ episode.duration_seconds | duration_format }}
-                        {%- if episode.one_off_special %} &middot; <mark>one-off special</mark>{% endif %}
+                        {%- if episode.is_standalone %} &middot; <mark>stand-alone episode</mark>{% endif %}
                     </p>
 
                     {% if episode.description %}

@@ -1,15 +1,15 @@
 <tr>
     {% if track.is_first %}
         <td
-            {% if episode.one_off_special %}
+            {% if episode.is_standalone %}
                 class="table-warning"
-                title="This episode was a one-off special."
+                title="This was a stand-alone episode."
             {% endif %}
             rowspan="{{ episode.track_count }}"
             align="center"
         >
             <a href="{{ episode.url }}" target="_blank">
-                {% if episode.one_off_special %}
+                {% if episode.is_standalone %}
                     {{ episode.number }}*
                 {% else %}
                     {{ episode.number }}

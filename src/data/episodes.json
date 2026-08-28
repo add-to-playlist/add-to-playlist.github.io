@@ -2213,7 +2213,7 @@
     "series": 3,
     "episode": 1,
     "broadcast": "2022-06-03T19:15:00+01:00",
-    "one_off_special": true,
+    "is_standalone": true,
     "comments": "Recorded live at Hay Festival 2022.",
     "name": "Wynne Evans, Anne Denholm and Patrick Rimes at the Hay Festival",
     "duration_seconds": 2527,
@@ -11585,7 +11585,7 @@
     ],
     "series": 11,
     "episode": 5,
-    "one_off_special": true,
+    "is_standalone": true,
     "name": "Festive classics with Amy Harman, Francesca Ter-Berg and Roderick Williams",
     "duration_seconds": 2516,
     "released": "2024-12-20T20:00:00+00:00",
@@ -15134,7 +15134,7 @@
     "id": "m002nl2r",
     "url": "https://www.bbc.co.uk/programmes/m002nl2r",
     "broadcast": "2025-12-23T11:00:00+00:00",
-    "one_off_special": true,
+    "is_standalone": true,
     "playlist_tracks": [
       {
         "artist": "Ella Fitzgerald",

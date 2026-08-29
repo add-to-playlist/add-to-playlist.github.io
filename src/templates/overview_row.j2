@@ -30,7 +30,7 @@
                 width="16"
                 alt="Spotify logo"
             />
-            <a href="{{ series | get_playlist_url | spotify_playlist_url }}" target="_blank">Spotify</a>
+            <a href="{{ series | get_playlist_id | spotify_playlist_url }}" target="_blank">Spotify</a>
         </td>
     {% endif %}
 

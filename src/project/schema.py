@@ -2,9 +2,14 @@ from itertools import chain
 
 from project.urls import bbc_programme_url, spotify_playlist_url, spotify_track_url
 
-from .constants import PROGRAMME_ID, PROGRAMME_NAME
+from .constants import (
+    ALL_PLAYLIST_ID,
+    PROGRAMME_ID,
+    PROGRAMME_NAME,
+    SERIES_PLAYLIST_IDS,
+)
 from .models import Episode, Series, SeriesCollection, Track
-from .utils import ALL_PLAYLIST_ID, SERIES_PLAYLIST_IDS, seconds_to_iso8601
+from .utils import seconds_to_iso8601
 
 
 def document(nodes: list[dict]):

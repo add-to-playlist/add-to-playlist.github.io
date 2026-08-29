@@ -4,30 +4,6 @@ from collections import defaultdict
 
 from project.models import PresenterLeaderboardRow, SeriesCollection
 
-# Playlist of all tracks
-ALL_PLAYLIST_ID = "2PgU4Fct9zICx1Hbt4X8N0"
-
-# Playlists of each series (in order)
-SERIES_PLAYLIST_IDS = (
-    "4HLH5EHjBPOpXuLto27Cf2",  # 1
-    "0757rUOarwlkD2olfe7sRo",  # 2
-    "29PDzvsHMt25PHW4xHW5Js",  # 3
-    "4mwdzqcSij07oa1NRnPAju",  # 4
-    "5qyhiiEWSnEqRBQ6wpFWCY",  # 5
-    "0dremLIKIqv5Nd8geXlwDI",  # 6
-    "1fFOSM0O7ZHfkHq0H0TSIO",  # 7
-    "0Ds5lazcAbTyJk4Znq4442",  # 8
-    "0e7JreuqtEFYMcNTTClDVC",  # 9
-    "3TEi3V4NPez2gxSQPSrEON",  # 10
-    "5wqzfsRuWIWtMod5ro0MpV",  # 11
-    "7b93UoWr6TY0LFfQIMYkMC",  # 12
-    "4A4zUOpersExaZmgbBygs1",  # 13
-    "0u91zsKlBcsnfeFkqcfSNG",  # 14
-    "7EL2wFkXWFZblO8zu8Q2A8",  # 15
-    "72M7ej4xKe0imadf9eFKjO",  # 16
-    "0axZqEALB6cLIpssusL5wp",  # 17
-)
-
 
 def ordinal(n: int):
     if 11 <= (n % 100) <= 13:

@@ -36,7 +36,7 @@
 
         <dt>Playlist</dt>
         <dd>
-            <a href="{{ series | get_playlist_url | spotify_playlist_url }}" target="_blank" rel="noopener">
+            <a href="{{ series | get_playlist_id | spotify_playlist_url }}" target="_blank" rel="noopener">
                 The series {{ series.number }} playlist on Spotify
             </a>
         </dd>

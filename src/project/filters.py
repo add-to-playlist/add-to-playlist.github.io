@@ -1,8 +1,8 @@
 from datetime import datetime
 
+from project.constants import SERIES_PLAYLIST_IDS
 from project.models import Series, Track
 from project.urls import spotify_playlist_url, spotify_track_url
-from project.utils import SERIES_PLAYLIST_IDS
 
 
 class MediaLinkException(Exception): ...
@@ -37,7 +37,7 @@ def duration_format(total_seconds: int):
     return f"{hours} hours {minutes} minutes"
 
 
-def get_playlist_url(series: Series):
+def get_playlist_id(series: Series):
     return SERIES_PLAYLIST_IDS[series.number - 1]
 
 
@@ -57,7 +57,7 @@ def table_class_name(number: int):
 filters = {
     "date_format": date_format,
     "duration_format": duration_format,
-    "get_playlist_url": get_playlist_url,
+    "get_playlist_id": get_playlist_id,
     "join_names": join_names,
     "media_link": media_link,
     "month_year_format": month_year_format,

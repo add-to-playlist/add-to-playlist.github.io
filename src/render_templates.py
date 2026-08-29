@@ -11,6 +11,7 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 from project.assets import make_asset_url
 from project.charts import build_bar_chart, build_heatmap
 from project.constants import (
+    ALL_PLAYLIST_ID,
     ARTIST_LEADERBOARD_AMOUNT,
     BASE_PAGE_TITLE,
     PRESENTER_LEADERBOARD_AMOUNT,
@@ -41,7 +42,6 @@ from project.urls import (
     site_url,
 )
 from project.utils import (
-    ALL_PLAYLIST_ID,
     get_artist_leaderboard,
     get_presenter_leaderboard,
 )

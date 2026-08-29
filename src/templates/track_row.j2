@@ -8,7 +8,7 @@
             rowspan="{{ episode.track_count }}"
             align="center"
         >
-            <a href="{{ episode.url }}" target="_blank">
+            <a href="/{{ episode_path(episode.series, episode.number) }}/">
                 {% if episode.is_standalone %}
                     {{ episode.number }}*
                 {% else %}

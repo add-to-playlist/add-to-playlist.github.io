@@ -16944,5 +16944,402 @@
     "released": "2026-06-26T19:00:00+00:00",
     "description": "Tom Seals and Debbie Wiseman in the final episode of the series.",
     "image": "p0m2t813.jpg"
+  },
+  {
+    "id": "m003012p",
+    "url": "https://www.bbc.co.uk/programmes/m003012p",
+    "broadcast": "2026-08-18T11:00:00+01:00",
+    "playlist_tracks": [
+      {
+        "artist": "Soul II Soul",
+        "name": "Back to Life",
+        "chosen_by": "Jeffrey Boakye",
+        "timestamp": "00:04:50",
+        "spotify": {
+          "id": "7vvRkLPIvfjjmCIqNxBuEZ",
+          "url": "https://open.spotify.com/track/7vvRkLPIvfjjmCIqNxBuEZ",
+          "name": "Back To Life",
+          "artists": [
+            {
+              "id": "2sIx6SmAMw9IBySG3Uj0jf",
+              "name": "Soul II Soul"
+            },
+            {
+              "id": "2RhMHmV21ZDcSGZ872U4ZY",
+              "name": "Caron Wheeler"
+            }
+          ],
+          "released": "1989-01-01",
+          "image": "2c6504b9f170161d93079e25",
+          "isrc": "GBAAA8900036",
+          "duration_ms": 228266
+        }
+      },
+      {
+        "artist": "So Solid Crew",
+        "name": "21 Seconds",
+        "chosen_by": "NoLay",
+        "connection": "Jazzy B's blueprint for a cultural movement inspired Mega Man and So Solid Crew.",
+        "timestamp": "00:10:17",
+        "spotify": {
+          "id": "5KZ8y0RROfoYbB5lwCk3EJ",
+          "url": "https://open.spotify.com/track/5KZ8y0RROfoYbB5lwCk3EJ",
+          "name": "21 Seconds",
+          "artists": [
+            {
+              "id": "5Wri8vAevy1yYWqN8oGGpH",
+              "name": "So Solid Crew"
+            }
+          ],
+          "released": "2001-11-19",
+          "image": "2049ecf4e62f213ec589bb48",
+          "isrc": "GBEBM0100011",
+          "duration_ms": 302826
+        }
+      },
+      {
+        "artist": "Janet Kay",
+        "name": "Silly Games",
+        "chosen_by": "Anna Phoebe",
+        "connection": "Pirate radio provided a platform for both UK garage (So Solid Crew) and lovers rock (Janet Kay).",
+        "timestamp": "00:20:35",
+        "spotify": {
+          "id": "2dtmRzFn53dbEuVSD7eEs1",
+          "url": "https://open.spotify.com/track/2dtmRzFn53dbEuVSD7eEs1",
+          "name": "Silly Games",
+          "artists": [
+            {
+              "id": "4D6CqTx48E5t6aL411Gl3F",
+              "name": "Janet Kay"
+            }
+          ],
+          "released": "2018-05-18",
+          "image": "1fd08c704098c042d4c9a72c",
+          "isrc": "GBAPX7900003",
+          "duration_ms": 237053
+        }
+      },
+      {
+        "artist": "Samuel Coleridge-Taylor",
+        "name": "Deep River",
+        "chosen_by": "Keelan Carew",
+        "connection": "The reggae rhythm of lovers rock connects to the African diaspora, leading to Samuel Coleridge-Taylor's arrangement of the spiritual \"Deep River\".",
+        "timestamp": "00:28:06",
+        "spotify": {
+          "id": "13dB1uvoaEHFG7LjOBSKD6",
+          "url": "https://open.spotify.com/track/13dB1uvoaEHFG7LjOBSKD6",
+          "name": "Deep River, Op. 59 No. 10",
+          "artists": [
+            {
+              "id": "0fhN6BHa9pN66ZnsrI5NUR",
+              "name": "Samuel Coleridge-Taylor"
+            }
+          ],
+          "released": "2021-07-09",
+          "image": "3847c7c967b5f9a1827c960f",
+          "isrc": "GBBBC2100189",
+          "duration_ms": 376626
+        },
+        "comments": "Performed live by Keelan Carew."
+      },
+      {
+        "artist": "Omar",
+        "name": "It\u2019s So",
+        "chosen_by": "Soweto Kinch",
+        "connection": "Building on the exploration of black sound, Omar's fusion of genres represents a modern take on the universal black musical experience explored by Coleridge-Taylor.",
+        "timestamp": "00:34:40",
+        "spotify": {
+          "id": "361M9IESclUqX2nlsPYuSp",
+          "url": "https://open.spotify.com/track/361M9IESclUqX2nlsPYuSp",
+          "name": "It's So",
+          "artists": [
+            {
+              "id": "0BzTIDnFI4pvhy7vVNd41Z",
+              "name": "Omar"
+            }
+          ],
+          "released": "2006-01-01",
+          "image": "8f3ae085ca40442648a81374",
+          "isrc": "DEP080600051",
+          "duration_ms": 269053
+        }
+      }
+    ],
+    "series": 18,
+    "episode": 1,
+    "name": "A celebration of Black British music live at V&A East, with Nolay, Soweto Kinch and Keelan Carew",
+    "duration_seconds": 2566,
+    "released": "2026-08-14T19:00:00+00:00",
+    "description": "Soweto Kinch, Nolay, Janet Kay and guests are live at the V&A East Museum.",
+    "image": "p0p4bpxn.jpg",
+    "is_standalone": true
+  },
+  {
+    "id": "m0030chh",
+    "url": "https://www.bbc.co.uk/programmes/m0030chh",
+    "broadcast": "2026-08-25T11:00:00+01:00",
+    "playlist_tracks": [
+      {
+        "artist": "John Barry",
+        "name": "James Bond Theme",
+        "chosen_by": "Anna Phoebe",
+        "timestamp": "00:04:36",
+        "spotify": {
+          "id": "589AelScFm0FYQ4VG1biJi",
+          "url": "https://open.spotify.com/track/589AelScFm0FYQ4VG1biJi",
+          "name": "The James Bond Theme (From \"Dr. No\")",
+          "artists": [
+            {
+              "id": "7ctAOUlIAs7yuMODWE2Fyz",
+              "name": "John Barry"
+            }
+          ],
+          "released": "1976-02-22",
+          "image": "59902ed094c28be89e2e05d7",
+          "isrc": "GBBBN6600001",
+          "duration_ms": 173093
+        }
+      },
+      {
+        "artist": "Gustav Mahler",
+        "name": "4th mvt: Adagio, from 9th Symphony",
+        "chosen_by": "David Arnold",
+        "connection": "John Barry was a fan of Mahler's Ninth Symphony, which influenced his later compositional style.",
+        "timestamp": "00:11:04",
+        "spotify": {
+          "id": "5bogXUAWVWSrmGb2aFOA9q",
+          "url": "https://open.spotify.com/track/5bogXUAWVWSrmGb2aFOA9q",
+          "name": "Mahler: Symphony No. 9 in D Major: IV. Adagio. Sehr langsam und noch zur\u00fcckhaltend",
+          "artists": [
+            {
+              "id": "2ANtgfhQkKpsW6EYSDqldz",
+              "name": "Gustav Mahler"
+            }
+          ],
+          "released": "1964-01-01",
+          "image": "4a265d62b7d8d1d90d97a702",
+          "isrc": "GBAYC0201905",
+          "duration_ms": 1381493
+        }
+      },
+      {
+        "artist": "Pink Floyd",
+        "name": "Time",
+        "chosen_by": "Jeffrey Boakye",
+        "connection": "Mahler's ambition for a symphony to \"contain everything\" parallels the expansive, epic scope of prog rock.",
+        "timestamp": "00:19:16",
+        "spotify": {
+          "id": "3TO7bbrUKrOSPGRTB5MeCz",
+          "url": "https://open.spotify.com/track/3TO7bbrUKrOSPGRTB5MeCz",
+          "name": "Time",
+          "artists": [
+            {
+              "id": "0k17h0D3J5VfsdmQ1iZtE9",
+              "name": "Pink Floyd"
+            }
+          ],
+          "released": "1973-03-01",
+          "image": "db216ca805faf5fe35df4ee6",
+          "isrc": "GBN9Y1100079",
+          "duration_ms": 422853
+        }
+      },
+      {
+        "artist": "Scott Walker",
+        "name": "It\u2019s Raining Today",
+        "chosen_by": "Nadine Shah",
+        "connection": "Both Pink Floyd and Scott Walker were innovators who pursued experimental, unorthodox musical paths.",
+        "timestamp": "00:24:54",
+        "spotify": {
+          "id": "1QtdHvQeFgSE7R7AuLPccZ",
+          "url": "https://open.spotify.com/track/1QtdHvQeFgSE7R7AuLPccZ",
+          "name": "It's Raining Today",
+          "artists": [
+            {
+              "id": "04tBaW21jyUfeP5iqiKBVq",
+              "name": "Scott Walker"
+            }
+          ],
+          "released": "1969-03-01",
+          "image": "7489de56991922c1b3d71703",
+          "isrc": "GBF086900037",
+          "duration_ms": 238933
+        }
+      },
+      {
+        "artist": "Miho Hazama, performed by the Danish Radio Big Band",
+        "name": "And the Door Unsealed",
+        "chosen_by": "Charlotte Harding",
+        "connection": "Scott Walker's song \"Copenhagen\" provides a geographical link to Denmark, home of the Danish Radio Big Band.",
+        "timestamp": "00:34:02",
+        "spotify": {
+          "id": "2dyinDR0cMHMCex16CrB7s",
+          "url": "https://open.spotify.com/track/2dyinDR0cMHMCex16CrB7s",
+          "name": "And the Door Unsealed",
+          "artists": [
+            {
+              "id": "2CCeO3wscYC4zDJ0jbrkvV",
+              "name": "Miho Hazama"
+            },
+            {
+              "id": "7ztGJv7tQJ33cm44UcNGoE",
+              "name": "The Danish Radio Big Band"
+            }
+          ],
+          "released": "2026-04-24",
+          "image": "1da59cbd864e3a65bdd5215b",
+          "isrc": "GBVEV2600172",
+          "duration_ms": 461841
+        }
+      }
+    ],
+    "series": 18,
+    "episode": 2,
+    "name": "Nadine Shah, David Arnold and Charlotte Harding celebrate the BBC Proms",
+    "duration_seconds": 2519,
+    "released": "2026-08-21T19:00:00+00:00",
+    "description": "Nadine Shah, David Arnold and Charlotte Harding celebrate the BBC Proms.",
+    "image": "p0lqpby4.jpg",
+    "is_standalone": true
+  },
+  {
+    "id": "m0030nfg",
+    "url": "https://www.bbc.co.uk/programmes/m0030nfg",
+    "broadcast": "2026-09-01T11:00:00+01:00",
+    "playlist_tracks": [
+      {
+        "artist": "Enya",
+        "name": "Orinoco Flow",
+        "chosen_by": "Anna Phoebe",
+        "timestamp": "00:05:40",
+        "spotify": {
+          "id": "0Fyj9w0HVfjoxm9S8nGClt",
+          "url": "https://open.spotify.com/track/0Fyj9w0HVfjoxm9S8nGClt",
+          "name": "Orinoco Flow",
+          "artists": [
+            {
+              "id": "6uothxMWeLWIhsGeF7cyo4",
+              "name": "Enya"
+            }
+          ],
+          "released": "2001",
+          "image": "488e2c5c9b5f0919bab04721",
+          "isrc": "GBAHT8802584",
+          "duration_ms": 266226
+        }
+      },
+      {
+        "artist": "Fugees",
+        "name": "Ready or Not",
+        "chosen_by": "RuthAnne",
+        "connection": "Samples Enya's \"Boadicea\".",
+        "timestamp": "00:11:08",
+        "spotify": {
+          "id": "3vZO25GdYuqFrR1kzZADnp",
+          "url": "https://open.spotify.com/track/3vZO25GdYuqFrR1kzZADnp",
+          "name": "Ready or Not",
+          "artists": [
+            {
+              "id": "2WKdxPFRD7IqZvlIAvhMgY",
+              "name": "Fugees"
+            },
+            {
+              "id": "2Mu5NfyYm8n5iTomuKAEHl",
+              "name": "Ms. Lauryn Hill"
+            },
+            {
+              "id": "7aBzpmFXB4WWpPl2F7RjBe",
+              "name": "Wyclef Jean"
+            },
+            {
+              "id": "0kJMPTXq7h3ztpDukSx5iD",
+              "name": "Pras"
+            }
+          ],
+          "released": "1996-02-13",
+          "image": "5b7865be7f7fcc05faec6137",
+          "isrc": "USSM19600051",
+          "duration_ms": 226933
+        }
+      },
+      {
+        "artist": "Nina Simone",
+        "name": "I Loves You, Porgy by George & Ira Gershwin,",
+        "chosen_by": "Gavin Higgins",
+        "connection": "Lyrical references to Nina Simone, the opera \"Porgy and Bess\", and Al Capone (who famously loved opera).",
+        "timestamp": "00:18:37",
+        "spotify": {
+          "id": "7cmbGGvayUtxVaa5JdaShw",
+          "url": "https://open.spotify.com/track/7cmbGGvayUtxVaa5JdaShw",
+          "name": "I Loves You Porgy",
+          "artists": [
+            {
+              "id": "7G1GBhoKtEPnP86X2PvEYO",
+              "name": "Nina Simone"
+            }
+          ],
+          "released": "2021-10-30",
+          "image": "dafa3ac7dab42c53510d9609",
+          "isrc": "FR8X02100158",
+          "duration_ms": 251560
+        }
+      },
+      {
+        "artist": "Fine Young Cannibals",
+        "name": "She Drives Me Crazy",
+        "chosen_by": "Jeffrey Boakye",
+        "connection": "Band named after the film \"All the Fine Young Cannibals\", similar to Nina Simone adopting a stage name from a film actress.",
+        "timestamp": "00:25:27",
+        "spotify": {
+          "id": "4d6eqRtpDX7tydHJGDZUBQ",
+          "url": "https://open.spotify.com/track/4d6eqRtpDX7tydHJGDZUBQ",
+          "name": "She Drives Me Crazy",
+          "artists": [
+            {
+              "id": "20p5D2KrE8CGuOjHtxsyTp",
+              "name": "Fine Young Cannibals"
+            }
+          ],
+          "released": "1988-01-01",
+          "image": "c573a4a852f010523c4ba383",
+          "isrc": "USRH10901907",
+          "duration_ms": 215773
+        }
+      },
+      {
+        "artist": "Newen Afrobeat & Seun Kuti",
+        "name": "Opposite People",
+        "chosen_by": "Anna Phoebe",
+        "connection": "Theme of auditions: Fine Young Cannibals' grueling eight-month search for their lead singer; Seun Kuti's lifelong preparation to step into his father Fela Kuti's legacy as band leader.",
+        "timestamp": "00:32:45",
+        "spotify": {
+          "id": "5KUWRnV44NZYjnkWNUzldH",
+          "url": "https://open.spotify.com/track/5KUWRnV44NZYjnkWNUzldH",
+          "name": "Opposite People",
+          "artists": [
+            {
+              "id": "0PTJ848ulShbjTx2yqaAlb",
+              "name": "Newen Afrobeat"
+            },
+            {
+              "id": "1GQur7dDvAWhKT9u9YwBJZ",
+              "name": "Seun Kuti"
+            }
+          ],
+          "released": "2017-02-17",
+          "image": "573ce50c61cf164f89b7ffc2",
+          "isrc": "QM4TW1719385",
+          "duration_ms": 818842
+        }
+      }
+    ],
+    "series": 18,
+    "episode": 3,
+    "name": "RuthAnne and Gavin Higgins get in the Flow",
+    "duration_seconds": 2520,
+    "released": "2026-08-28T19:00:00+00:00",
+    "description": "RuthAnne and Gavin Higgins create a five-track playlist.",
+    "image": "p0m2t813.jpg",
+    "is_standalone": true
   }
 ]

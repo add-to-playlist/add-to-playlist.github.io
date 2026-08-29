@@ -306,10 +306,21 @@ def _render_series_page(env: Environment, series: Series):
 
 
 def render_episode_pages(env: Environment, all_series: SeriesCollection):
+    all_episodes = all_series.episodes
     pages: list[Page] = []
 
-    for episode in all_series.episodes:
-        pages.append(_render_episode_page(env, episode))
+    for i, episode in enumerate(all_episodes):
+        prev_episode = all_episodes[i - 1] if i > 0 else None
+        next_episode = all_episodes[i + 1] if i + 1 < len(all_episodes) else None
+
+        pages.append(
+            _render_episode_page(
+                env=env,
+                episode=episode,
+                prev_episode=prev_episode,
+                next_episode=next_episode,
+            )
+        )
 
     return pages
 
@@ -322,7 +333,12 @@ def episode_page_description(episode: Episode):
     )
 
 
-def _render_episode_page(env: Environment, episode: Episode):
+def _render_episode_page(
+    env: Environment,
+    episode: Episode,
+    prev_episode: Episode | None,
+    next_episode: Episode | None,
+):
     canonical_url = get_page_canonical_url(
         base_url=SITE_BASE_URL,
         series_number=episode.series,
@@ -357,6 +373,8 @@ def _render_episode_page(env: Environment, episode: Episode):
         ),
         json_ld_nodes=json_ld_nodes,
         episode=episode,
+        prev_episode=prev_episode,
+        next_episode=next_episode,
         page_title=f"{BASE_PAGE_TITLE} - {episode.code} - {episode.name}",
         page_description=episode_page_description(episode),
         canonical_url=canonical_url,

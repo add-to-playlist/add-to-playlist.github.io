@@ -135,6 +135,21 @@
         {% endfor %}
     </div>
 
+    <nav class="pager" aria-label="Adjacent episodes">
+        {% if prev_episode %}
+            <a class="pager-prev" rel="prev" href="/{{ episode_path(prev_episode.series, prev_episode.number) }}/">
+                <small>&laquo; Previous</small>
+                {{ prev_episode.code }}
+            </a>
+        {% endif %}
+        {% if next_episode %}
+            <a class="pager-next" rel="next" href="/{{ episode_path(next_episode.series, next_episode.number) }}/">
+                <small>Next &raquo;</small>
+                {{ next_episode.code }}
+            </a>
+        {% endif %}
+    </nav>
+
     <nav class="episode-nav">
         <ul>
             <li><a href="/{{ series_path(episode.series) }}/">All of series {{ episode.series }}</a></li>

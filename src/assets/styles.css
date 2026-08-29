@@ -155,6 +155,34 @@
     width: 1.2em;
     height: 1.2em;
 }
+.pager {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--pico-spacing);
+    margin-bottom: var(--pico-block-spacing-vertical);
+}
+.pager a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border: var(--pico-border-width) solid var(--pico-muted-border-color);
+    border-radius: var(--pico-border-radius);
+    text-decoration: none;
+}
+.pager small {
+    display: block;
+    color: var(--pico-muted-color);
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.pager-prev {
+    grid-column: 1;
+}
+.pager-next {
+    grid-column: 2;
+    text-align: right;
+}
 .track-detail footer {
     background: none;
     border: none;

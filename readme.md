@@ -10,7 +10,7 @@ Python and Jinja2 render the JSON in `src/data/` into a static site, which GitHu
 
 Most of the data was gathered automatically by scraping each episode's BBC Sounds page and querying Spotify's Web API for a recording. Because of how that search behaves, there may be slight inconsistencies between the Spotify link and the version played on the show (a remix appearing ahead of the original, for instance). Shazam and SoundHound were used to identify the exact recordings where possible.
 
-Episode runtimes are measured from the audio with `ffprobe`. One episode's published duration claims 60 seconds, and many share identical values that don't match their actual runtimes.
+Episode runtimes are measured from the audio with `ffprobe` rather than relying on the reported values in BBC's structured data (one episode's published duration claims 60 seconds, and many share identical values that don't match their actual runtimes).
 
 Although care has been taken, there will probably be a few mistakes; corrections are therefore very much welcomed!
 

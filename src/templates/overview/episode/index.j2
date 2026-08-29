@@ -65,6 +65,21 @@
     <h2>Tracks chosen</h2>
     <div class="track-list">
         {% for track in episode %}
+            {% if not loop.first or track.connection is not none %}
+                <div class="track-connector">
+                    {{ icons.chain_line(fade=loop.first) }}
+                    {% if track.connection is not none %}
+                        <p class="track-connection">
+                            <span class="track-connection-label">
+                                {{ icons.connection() }}
+                                Connection
+                            </span>
+                            {{ track.connection }}
+                        </p>
+                    {% endif %}
+                    {{ icons.chain_arrow() }}
+                </div>
+            {% endif %}
             <article class="track">
                 {% set artwork = track.artwork_url(300) %}
                 {% if artwork is not none %}
@@ -99,16 +114,6 @@
                             <em>Artist n/a</em>
                         {% endif %}
                     </p>
-
-                    {% if track.connection is not none %}
-                        <p class="track-connection">
-                            <span class="track-connection-label">
-                                {{ icons.connection() }}
-                                Connection
-                            </span>
-                            {{ track.connection }}
-                        </p>
-                    {% endif %}
 
                     {% if track.has_comments %}
                         <p class="note">

@@ -43,6 +43,7 @@
     grid-template-columns: 3rem 1fr;
     gap: 1.25rem;
     align-items: start;
+    border: var(--pico-border-width) solid var(--pico-muted-border-color);
 }
 .episode-number {
     display: grid;
@@ -72,6 +73,7 @@
     grid-template-columns: 6rem 1fr;
     gap: 1.25rem;
     align-items: start;
+    border: var(--pico-border-width) solid var(--pico-muted-border-color);
 }
 .track img,
 .track-artwork-placeholder {
@@ -96,13 +98,39 @@
 .track-artists {
     color: var(--pico-muted-color);
 }
-.track-connection,
 .note {
-    border-left: 0.25rem solid var(--pico-primary-border);
+    border-left: 0.25rem solid var(--pico-muted-border-color);
     padding-left: 0.75rem;
 }
-.note {
-    border-left-color: var(--pico-muted-border-color);
+.track-list > .track:not(:last-child) {
+    margin-bottom: 0;
+}
+.track-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.track-connector .chain-part {
+    display: block;
+    flex-shrink: 0;
+    color: var(--pico-primary-border);
+}
+.chain-line {
+    width: 1rem;
+    height: 1.5rem;
+}
+.chain-arrow {
+    width: 1rem;
+    height: 2rem;
+}
+.track-connection {
+    margin: 0;
+    max-width: 40rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--pico-card-background-color);
+    border: var(--pico-border-width) solid var(--pico-muted-border-color);
+    border-left: 0.25rem solid var(--pico-primary-border);
+    border-radius: var(--pico-border-radius);
 }
 .track-connection-label,
 .note-label {
@@ -117,6 +145,11 @@
     text-transform: uppercase;
     white-space: nowrap;
 }
+.track-connection-label {
+    display: flex;
+    margin-right: 0;
+    margin-bottom: 0.25rem;
+}
 .track-connection-label svg,
 .note-label svg {
     width: 1.2em;
@@ -128,10 +161,26 @@
     padding: 0;
     margin: 0;
 }
+@media (min-width: 577px) {
+    .track-connector {
+        align-items: flex-start;
+    }
+    /* Run the chain down the centre of the 6rem artwork column: card
+       padding + 3rem, minus the 0.5rem to the line within the svg */
+    .track-connector .chain-part {
+        margin-left: calc(var(--pico-block-spacing-horizontal) + 2.5rem);
+    }
+}
 @media (max-width: 576px) {
     .track {
         grid-template-columns: 4rem 1fr;
         gap: 0.75rem;
+    }
+    .track-connection {
+        text-align: center;
+    }
+    .track-connection-label {
+        justify-content: center;
     }
 }
 .tall-chart {

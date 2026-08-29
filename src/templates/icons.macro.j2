@@ -14,6 +14,39 @@
     </svg>
 {% endmacro %}
 
+{% macro chain_line(fade=false) %}
+    <svg
+        viewBox="0 0 16 24"
+        class="chain-part chain-line"
+        aria-hidden="true"
+        focusable="false"
+    >
+        {% if fade %}
+            <defs>
+                <linearGradient id="chain-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="24">
+                    <stop offset="0" stop-color="currentColor" stop-opacity="0" />
+                    <stop offset="1" stop-color="currentColor" stop-opacity="1" />
+                </linearGradient>
+            </defs>
+        {% endif %}
+        <line x1="8" y1="0" x2="8" y2="24" stroke="{{ 'url(#chain-fade)' if fade else 'currentColor' }}" stroke-width="3" />
+    </svg>
+{% endmacro %}
+
+{% macro chain_arrow() %}
+    <svg
+        viewBox="0 0 16 32"
+        class="chain-part chain-arrow"
+        stroke="currentColor"
+        stroke-width="3"
+        aria-hidden="true"
+        focusable="false"
+    >
+        <line x1="8" y1="0" x2="8" y2="28" />
+        <polyline points="2 22.5, 8 29, 14 22.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+{% endmacro %}
+
 {% macro connection() %}
     <svg
         viewBox="0 0 24 24"

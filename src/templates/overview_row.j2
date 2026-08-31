@@ -5,18 +5,30 @@
             rowspan="{{ series | length }}"
             class="{{ series.number | table_class_name }}"
         >
-            {{ series.number }}
+            <a href="/{{ series_path(series.number) }}/">
+                {{ series.number }}
+            </a>
         </td>
     {% endif %}
 
-    <td>{{ ns.ep_number_overall }}</td>
+    <td>
+        <a href="/{{ episode_path(episode.series, episode.number) }}/">
+            {{ ns.ep_number_overall }}
+        </a>
+    </td>
 
     {% if episode.is_standalone %}
         <td title="This was a stand-alone episode." class="table-warning">
-            {{ episode.number }}*
+            <a href="/{{ episode_path(episode.series, episode.number) }}/">
+                {{ episode.number }}*
+            </a>
         </td>
     {% else %}
-        <td>{{ episode.number }}</td>
+        <td>
+            <a href="/{{ episode_path(episode.series, episode.number) }}/">
+                {{ episode.number }}
+            </a>
+        </td>
     {% endif %}
 
     <td>{{ ns.track_total }}</td>

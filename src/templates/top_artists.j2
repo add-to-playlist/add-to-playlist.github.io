@@ -44,7 +44,7 @@
                         <td>{{ track.name }}</td>
 
                         <td width="256">
-                            <a href="{{ track.episode_url }}" target="_blank">
+                            <a href="/{{ episode_path(track.series, track.episode) }}/">
                                 Series {{ track.series }}, ep. {{ track.episode }}, track {{ track.number }}
                             </a>
                         </td>

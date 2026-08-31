@@ -29,14 +29,14 @@
         <dt>First broadcast</dt>
         <dd>
             <span title="{{ episode.broadcast }}">
-                {{ episode.broadcast | date_format }}
+                {{ episode.broadcast | datetime_format }}
             </span>
         </dd>
 
         <dt>On BBC Sounds from</dt>
         <dd>
             <span title="{{ episode.released }}">
-                {{ episode.released | date_format }}
+                {{ episode.released | datetime_format }}
             </span>
         </dd>
 

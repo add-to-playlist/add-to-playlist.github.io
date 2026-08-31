@@ -13,6 +13,12 @@ def date_format(value: str):
     return f"{dt.day} {dt.strftime('%B %Y')}"
 
 
+def datetime_format(value: str) -> str:
+    dt = datetime.fromisoformat(value)
+    time_part = dt.strftime("%I:%M%p").lstrip("0").lower()
+    return f"{dt.day} {dt.strftime('%B %Y')}, {time_part}"
+
+
 def month_year_format(value: str):
     return datetime.fromisoformat(value).strftime("%B %Y")
 
@@ -56,6 +62,7 @@ def table_class_name(number: int):
 
 filters = {
     "date_format": date_format,
+    "datetime_format": datetime_format,
     "duration_format": duration_format,
     "get_playlist_id": get_playlist_id,
     "join_names": join_names,

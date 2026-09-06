@@ -17213,5 +17213,130 @@
     "description": "RuthAnne and Gavin Higgins create a five-track playlist.",
     "image": "p0m2t813.jpg",
     "is_standalone": true
+  },
+  {
+    "id": "m0030yyt",
+    "url": "https://www.bbc.co.uk/programmes/m0030yyt",
+    "broadcast": "2026-09-04T19:15:00+01:00",
+    "playlist_tracks": [
+      {
+        "artist": "ABC",
+        "name": "The Look of Love",
+        "spotify": {
+          "id": "4bElUcXrus6qPK99PAmjEe",
+          "url": "https://open.spotify.com/track/4bElUcXrus6qPK99PAmjEe",
+          "name": "The Look Of Love",
+          "artists": [
+            {
+              "id": "2s79xe5F6eUQkjwjww27Fh",
+              "name": "ABC"
+            }
+          ],
+          "released": "2016-02-12",
+          "image": "d627891f6f60494d61afca52",
+          "isrc": "GBF088200008",
+          "duration_ms": 210560
+        },
+        "chosen_by": "Anna Phoebe",
+        "timestamp": "04:12"
+      },
+      {
+        "artist": "Bob Marley",
+        "name": "Stir It Up",
+        "spotify": {
+          "id": "4FNm4ZJaUVLDCMXcqwS6zY",
+          "url": "https://open.spotify.com/track/4FNm4ZJaUVLDCMXcqwS6zY",
+          "name": "Stir It Up",
+          "artists": [
+            {
+              "id": "2QsynagSdAqZj3U9HgDzjD",
+              "name": "Bob Marley & The Wailers"
+            }
+          ],
+          "released": "2002-01-01",
+          "image": "413a6c2c7b296d98171e5e21",
+          "isrc": "GBAAN7390002",
+          "duration_ms": 330760
+        },
+        "chosen_by": "Jon Boden",
+        "connection": "The Outlook Club in Doncaster, where both ABC (as Vice Versa) and Bob Marley performed.",
+        "timestamp": "10:46"
+      },
+      {
+        "artist": "Eliza Carthy",
+        "name": "Little Gypsy Girl",
+        "spotify": {
+          "id": "4oYZuSI61MY7NNNpP5rUHT",
+          "url": "https://open.spotify.com/track/4oYZuSI61MY7NNNpP5rUHT",
+          "name": "Little Gypsy Girl",
+          "artists": [
+            {
+              "id": "3ZSRiAJKs42ymp2KYA80Qh",
+              "name": "Eliza Carthy"
+            }
+          ],
+          "released": "2006",
+          "image": "aad26cf61f9d8afba4533e40",
+          "isrc": "GBBHW0253904",
+          "duration_ms": 131453
+        },
+        "chosen_by": "Jeffrey Boakye",
+        "connection": "Palm reading: Bob Marley was fascinated by palmistry as a child, and the song \"Little Gypsy Girl\" tells a story of fortune-telling.",
+        "timestamp": "17:03"
+      },
+      {
+        "artist": "B\u00e9la Bart\u00f3k",
+        "name": "Pe-loc",
+        "spotify": {
+          "id": "5OBRNkW5cvFo6UOHqQ5BUO",
+          "url": "https://open.spotify.com/track/5OBRNkW5cvFo6UOHqQ5BUO",
+          "name": "Romanian Folk Dances, Sz 56: III. Pe-loc - Andante",
+          "artists": [
+            {
+              "id": "5zyNXVd952fWOjkdGHCvPd",
+              "name": "B\u00e9la Bart\u00f3k"
+            }
+          ],
+          "released": "2013-07-30",
+          "image": "e4973d4d0673487410bffed2",
+          "isrc": "USUW61300054",
+          "duration_ms": 66920
+        },
+        "chosen_by": "Anne Dudley",
+        "connection": "The use of wax cylinder recordings to preserve folk music. Percy Grainger recorded \"Little Gypsy Girl\" using the technique, and B\u00e9la Bart\u00f3k used the same method to collect the folk tunes that inspired his compositions.",
+        "timestamp": "24:53",
+        "comments": "Also performed live by Anne Dudley."
+      },
+      {
+        "artist": "Mariachi Vargas de Tecalitl\u00e1n",
+        "name": "La Cucaracha",
+        "spotify": {
+          "id": "5Wirnvr65MmDZ0g4SQWhzp",
+          "url": "https://open.spotify.com/track/5Wirnvr65MmDZ0g4SQWhzp",
+          "name": "La Cucaracha",
+          "artists": [
+            {
+              "id": "0JTujDbHVqhWAGl06aaW78",
+              "name": "Mariachi Vargas De Tecalitl\u00e1n"
+            }
+          ],
+          "released": "2025-05-05",
+          "image": "e113d88ee59dbab0f8d639be",
+          "isrc": "ES31E2504814",
+          "duration_ms": 147980
+        },
+        "chosen_by": "Anna Phoebe",
+        "connection": "Insects: Bart\u00f3k was an avid insect collector, and \"La Cucaracha\" (\"The Cockroach\") is a famous folk song about a cockroach.",
+        "timestamp": "33:05"
+      }
+    ],
+    "series": 18,
+    "episode": 4,
+    "name": "Anne Dudley and Jon Boden at the Crossed Wires festival in Sheffield",
+    "duration_seconds": 2570,
+    "released": "2026-09-04T19:00:00+00:00",
+    "description": "Jon Boden and Anne Dudley join Anna and Jeffrey at the Crossed Wires festival in Sheffield",
+    "image": "p0m2t813.jpg",
+    "is_standalone": true
   }
 ]

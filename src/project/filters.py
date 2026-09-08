@@ -1,8 +1,11 @@
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from project.constants import SERIES_PLAYLIST_IDS
 from project.models import Series, Track
 from project.urls import spotify_playlist_url, spotify_track_url
+
+LONDON = ZoneInfo("Europe/London")
 
 
 class MediaLinkException(Exception): ...
@@ -13,8 +16,10 @@ def date_format(value: str):
     return f"{dt.day} {dt.strftime('%B %Y')}"
 
 
-def datetime_format(value: str) -> str:
+def datetime_format(value: str, tz=LONDON) -> str:
     dt = datetime.fromisoformat(value)
+    if dt.tzinfo is not None:
+        dt = dt.astimezone(tz)
     time_part = dt.strftime("%I:%M%p").lstrip("0").lower()
     return f"{dt.day} {dt.strftime('%B %Y')}, {time_part}"
 

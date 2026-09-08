@@ -22,6 +22,7 @@ from project.filters import date_format, filters, join_names, month_year_format
 from project.models import Episode, Series, SeriesCollection
 from project.schema import (
     all_tracks_playlist_node,
+    artist_leaderboard_node,
     breadcrumb_node,
     document,
     episode_node,
@@ -206,6 +207,11 @@ def render_artists_page(env: Environment, all_series: SeriesCollection):
                 ],
             ),
             programme_node(home_url=get_canonical_url()),
+            artist_leaderboard_node(
+                canonical_url=f"{get_canonical_url()}{ARTISTS_PATH}/",
+                leaderboard=artist_leaderboard,
+                first_broadcast_date=date_format(all_series.first_broadcast),
+            ),
         ],
         page_title=f"{BASE_PAGE_TITLE} - Most-Chosen Artists",
         page_description=f"The {ARTIST_LEADERBOARD_AMOUNT} artists chosen most often on {PROGRAMME_NAME}, as a table and as charts showing how their picks spread across the series.",

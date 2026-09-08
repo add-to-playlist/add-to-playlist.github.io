@@ -88,6 +88,7 @@ def get_artist_leaderboard(
                     for artist in track.spotify.artists:
                         if artist.id not in all_artists:
                             all_artists[artist.id] = {
+                                "id": artist.id,
                                 "count": 0,
                                 "names": [],
                                 "tracks": [],
@@ -113,6 +114,7 @@ def get_artist_leaderboard(
     for item in all_artists.values():
         leaderboard.append(
             {
+                "id": item["id"],
                 "names": item["names"],
                 "count": item["count"],
                 "tracks": item["tracks"],

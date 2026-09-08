@@ -1,5 +1,6 @@
 from .constants import (
     BBC_PROGRAMME_URL,
+    SPOTIFY_ARTIST_URL,
     SPOTIFY_PLAYLIST_URL,
     SPOTIFY_TRACK_URL,
 )
@@ -11,6 +12,10 @@ TRACKS_PATH = "tracks"
 
 def bbc_programme_url(pid: str):
     return f"{BBC_PROGRAMME_URL}{pid}"
+
+
+def spotify_artist_url(artist_id: str):
+    return f"{SPOTIFY_ARTIST_URL}{artist_id}"
 
 
 def spotify_track_url(track_id: str):

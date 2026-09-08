@@ -3,6 +3,7 @@ PROGRAMME_ID = "m00106lb"
 BASE_PAGE_TITLE = f"{PROGRAMME_NAME} (BBC Radio 4)"
 
 BBC_PROGRAMME_URL = "https://www.bbc.co.uk/programmes/"
+SPOTIFY_ARTIST_URL = "https://open.spotify.com/artist/"
 SPOTIFY_TRACK_URL = "https://open.spotify.com/track/"
 SPOTIFY_PLAYLIST_URL = "https://open.spotify.com/playlist/"
 

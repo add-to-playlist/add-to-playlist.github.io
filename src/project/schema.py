@@ -1,6 +1,11 @@
 from itertools import chain
 
-from project.urls import bbc_programme_url, spotify_playlist_url, spotify_track_url
+from project.urls import (
+    bbc_programme_url,
+    spotify_artist_url,
+    spotify_playlist_url,
+    spotify_track_url,
+)
 
 from .constants import (
     ALL_PLAYLIST_ID,
@@ -183,6 +188,50 @@ def track_list_item_node(track: Track, position: int):
 
 def music_group_node(artist: str):
     return {"@type": "MusicGroup", "name": artist}
+
+
+def artist_leaderboard_node(
+    canonical_url: str,
+    leaderboard: list[dict],
+    first_broadcast_date: str,
+):
+    return {
+        "@type": "ItemList",
+        "@id": node_id(canonical_url, "artist-leaderboard"),
+        "name": f"{PROGRAMME_NAME} - most-chosen artists",
+        "description": (
+            "Artists ranked by how many of their tracks have been chosen on "
+            f"{PROGRAMME_NAME}. Artists tied on the same total share a joint "
+            "position."
+        ),
+        "url": canonical_url,
+        "numberOfItems": len(leaderboard),
+        "itemListOrder": "ItemListOrderDescending",
+        "itemListElement": [
+            artist_list_item_node(
+                artist=artist,
+                position=x,
+                first_broadcast_date=first_broadcast_date,
+            )
+            for x, artist in enumerate(leaderboard, start=1)
+        ],
+    }
+
+
+def artist_list_item_node(artist: dict, position: int, first_broadcast_date: str):
+    count = artist["count"]
+    rank = artist["rank"]
+    times = "time" if count == 1 else "times"
+
+    return {
+        "@type": "ListItem",
+        "position": position,
+        "description": f"{rank} - chosen {count} {times} since {first_broadcast_date}",
+        "item": {
+            **music_group_node(", ".join(artist["names"])),
+            "sameAs": spotify_artist_url(artist["id"]),
+        },
+    }
 
 
 def breadcrumb_node(crumbs: list[tuple[str, str]]):

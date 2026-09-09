@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "add-to-playlist"
+version = "0.1.0"
+description = "Static site generator for the independent catalogue of BBC Radio 4's Add to Playlist"
+requires-python = ">=3.12"
+dependencies = [
+    "jinja2",
+    "minify-html",
+    "tzdata",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["project"]

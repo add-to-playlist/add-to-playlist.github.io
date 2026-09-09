@@ -1,4 +1,6 @@
+*.egg-info/
 *.pyc
+/.venv
 /build
 /CLAUDE.md
 /node_modules

@@ -261,8 +261,10 @@ def render_presenters_page(env: Environment, all_series: SeriesCollection):
 def render_series_pages(env: Environment, all_series: SeriesCollection):
     pages: list[Page] = []
 
-    for series in all_series:
-        pages.append(_render_series_page(env, series))
+    for i, series in enumerate(all_series):
+        prev_series = all_series[i - 1] if i > 0 else None
+        next_series = all_series[i + 1] if i + 1 < len(all_series) else None
+        pages.append(_render_series_page(env, series, prev_series, next_series))
 
     return pages
 
@@ -277,7 +279,12 @@ def series_page_description(series: Series):
     )
 
 
-def _render_series_page(env: Environment, series: Series):
+def _render_series_page(
+    env: Environment,
+    series: Series,
+    prev_series: Series | None,
+    next_series: Series | None,
+):
     canonical_url = get_page_canonical_url(
         base_url=SITE_BASE_URL, series_number=series.number
     )
@@ -308,6 +315,8 @@ def _render_series_page(env: Environment, series: Series):
         lastmod=broadcast_date(series.last_broadcast),
         og_image_url=get_canonical_url() + "images/icon.png",
         series=series,
+        prev_series=prev_series,
+        next_series=next_series,
     )
 
 

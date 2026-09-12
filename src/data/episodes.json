@@ -17323,5 +17323,134 @@
     "description": "Jon Boden and Anne Dudley join Anna and Jeffrey at the Crossed Wires festival in Sheffield",
     "image": "p0m2t813.jpg",
     "is_standalone": true
+  },
+  {
+    "id": "m00318d6",
+    "url": "https://www.bbc.co.uk/programmes/m00318d6",
+    "broadcast": "2026-09-11T19:15:00+01:00",
+    "playlist_tracks": [
+      {
+        "artist": "George Michael",
+        "name": "Shoot the Dog",
+        "spotify": {
+          "id": "6TqMGkVSWM6rquHSr9tpBf",
+          "url": "https://open.spotify.com/track/6TqMGkVSWM6rquHSr9tpBf",
+          "name": "Shoot the Dog",
+          "artists": [
+            {
+              "id": "19ra5tSw0tWufvUp8GotLo",
+              "name": "George Michael"
+            }
+          ],
+          "released": "2004-03-15",
+          "image": "2d7847e92ea987a81adb699f",
+          "isrc": "GBAKW0201289",
+          "duration_ms": 307733
+        },
+        "chosen_by": "Jeffrey Boakye",
+        "connection": "Political satire and social commentary; songs that poke fun at political figures.",
+        "timestamp": "00:03:13"
+      },
+      {
+        "artist": "John Coltrane & Johnny Hartman",
+        "name": "Lush Life",
+        "spotify": {
+          "id": "0Srs2sPdZTfFvvfLP4DGa0",
+          "url": "https://open.spotify.com/track/0Srs2sPdZTfFvvfLP4DGa0",
+          "name": "Lush Life",
+          "artists": [
+            {
+              "id": "2hGh5VOeeqimQFxqXvfCUf",
+              "name": "John Coltrane"
+            },
+            {
+              "id": "7qVvIFc9DktkAc0HKzRhNo",
+              "name": "Johnny Hartman"
+            }
+          ],
+          "released": "1963-01-01",
+          "image": "b933190768f4cdfa4f487aaa",
+          "isrc": "USMC16352661",
+          "duration_ms": 329613
+        },
+        "chosen_by": "Emma Rawicz",
+        "connection": "Saxophone-driven tracks; both artists wrote their breakthrough material at age 17.",
+        "timestamp": "00:10:15"
+      },
+      {
+        "artist": "The Animals",
+        "name": "House of the Rising Sun",
+        "spotify": {
+          "id": "3TETmhGNWOcquUTtcr6RIR",
+          "url": "https://open.spotify.com/track/3TETmhGNWOcquUTtcr6RIR",
+          "name": "The House of the Rising Sun",
+          "artists": [
+            {
+              "id": "3ICflSq6ZgYAIrm2CTkfVP",
+              "name": "The Animals"
+            }
+          ],
+          "released": "2019-02-01",
+          "image": "177c39d848987d806b51c2a3",
+          "isrc": "GBAYE6400209",
+          "duration_ms": 269906
+        },
+        "chosen_by": "Anna Phoebe",
+        "connection": "Songs without a conventional chorus; \"Lush Life\" has no separate functioning chorus, while \"House of the Rising Sun\" uses a strophic structure.",
+        "timestamp": "00:19:10"
+      },
+      {
+        "artist": "Modest Mussorgsky",
+        "name": "The Old Castle",
+        "spotify": {
+          "id": "5gcJlOTnFg2NZuNRntZvTB",
+          "url": "https://open.spotify.com/track/5gcJlOTnFg2NZuNRntZvTB",
+          "name": "Pictures at an Exhibition (Orch. Ravel): II. The Old Castle",
+          "artists": [
+            {
+              "id": "284mnx33IWcymQEpMxyfHl",
+              "name": "Modest Mussorgsky"
+            }
+          ],
+          "released": "1991-12-01",
+          "image": "9f61ebaeb1904a8a9dfdb71a",
+          "isrc": "NLA509006704",
+          "duration_ms": 265840
+        },
+        "chosen_by": "Arsha Kaviani",
+        "connection": "Ominous houses; the \"House of the Rising Sun\" is a place of ruin, while \"The Old Castle\" evokes a mysterious, foreboding medieval castle.",
+        "timestamp": "00:26:45"
+      },
+      {
+        "artist": "TLC",
+        "name": "No Scrubs",
+        "spotify": {
+          "id": "1KGi9sZVMeszgZOWivFpxs",
+          "url": "https://open.spotify.com/track/1KGi9sZVMeszgZOWivFpxs",
+          "name": "No Scrubs",
+          "artists": [
+            {
+              "id": "0TImkz4nPqjegtVSMZnMRq",
+              "name": "TLC"
+            }
+          ],
+          "released": "1999-02-23",
+          "image": "61ffafd5e31a37336531cf95",
+          "isrc": "USLF29900479",
+          "duration_ms": 214400
+        },
+        "chosen_by": "Jeffrey Boakye",
+        "connection": "Key of G-sharp minor.",
+        "timestamp": "00:33:58",
+        "comments": "Second time a G-sharp minor connection has been made (previously used in series 12, episode 5)."
+      }
+    ],
+    "series": 18,
+    "episode": 5,
+    "name": "Emma Rawicz and Arsha Kaviani celebrate exceptional teenage talent",
+    "duration_seconds": 2564,
+    "released": "2026-09-11T19:00:00+00:00",
+    "description": "Emma Rawicz and Arsha Kaviani join Anna and Jeffrey to add five more tracks",
+    "image": "p0m2t813.jpg"
   }
 ]

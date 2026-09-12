@@ -26,7 +26,7 @@
         <dd>{{ series | length }}</dd>
 
         <dt>Tracks</dt>
-        <dd>{{ series.track_count }}</dd>
+        <dd><a href="/{{ TRACKS_PATH }}/#series-{{ series.number }}">{{ series.track_count }}</a></dd>
 
         <dt>Total running time</dt>
         <dd>{{ series.duration_seconds | duration_format }}</dd>

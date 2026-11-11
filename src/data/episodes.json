@@ -17581,5 +17581,114 @@
     "released": "2026-09-18T19:00:00+00:00",
     "description": "Rick Wakeman and Amanda Whiting add the final five tracks of the series.",
     "image": "p0m2t813.jpg"
+  },
+  {
+    "id": "m0033s80",
+    "url": "https://www.bbc.co.uk/programmes/m0033s80",
+    "broadcast": "2026-11-06T19:15:00+00:00",
+    "playlist_tracks": [
+      {
+        "artist": "Rosal\u00eda",
+        "name": "Berghain",
+        "spotify": {
+          "id": "2T8yuUKl1nhmtaIocqWo4i",
+          "url": "https://open.spotify.com/track/2T8yuUKl1nhmtaIocqWo4i",
+          "name": "Berghain",
+          "artists": [
+            {
+              "id": "7ltDVBr6mKbRvohxheJ9h1",
+              "name": "ROSAL\u00cdA"
+            }
+          ],
+          "released": "2025-11-07",
+          "image": "93ee2e2f2dfb7de9befcc164",
+          "isrc": "USSM12504034",
+          "duration_ms": 178853
+        },
+        "chosen_by": "Anna Phoebe",
+        "timestamp": "03:10"
+      },
+      {
+        "artist": "Arvo P\u00e4rt",
+        "name": "Cantus in Memoriam Benjamin Britten",
+        "spotify": {
+          "id": "1DvvojxrPoGkMWwFHx6ORX",
+          "url": "https://open.spotify.com/track/1DvvojxrPoGkMWwFHx6ORX",
+          "name": "Cantus in memoriam Benjamin Britten",
+          "artists": [
+            {
+              "id": "2P6ygesd9xg5DPOBnda2jg",
+              "name": "Arvo P\u00e4rt"
+            }
+          ],
+          "released": "1984-09-01",
+          "image": "c113c6b3f93ba4fbda780ab8",
+          "isrc": "DEB338427502",
+          "duration_ms": 300493
+        },
+        "chosen_by": "Claire Wickes",
+        "connection": "Music that almost entirely grinds to a halt and restarts; shared spiritual element.",
+        "timestamp": "10:55"
+      },
+      {
+        "artist": "Mike Oldfield",
+        "name": "Tubular Bells Pt 1",
+        "spotify": {
+          "id": "7ERSQrRptZVM7q3VOdM7OL",
+          "url": "https://open.spotify.com/track/7ERSQrRptZVM7q3VOdM7OL",
+          "name": "Tubular Bells - Pt. I",
+          "artists": [
+            {
+              "id": "562Od3CffWedyz2BbeYWVn",
+              "name": "Mike Oldfield"
+            }
+          ],
+          "released": "1973-02-01",
+          "image": "631093c9071b1211de4be4c1",
+          "isrc": "GBUM70904642",
+          "duration_ms": 1561133
+        },
+        "chosen_by": "Jeffrey Boakye",
+        "connection": "Bells; the tintinnabuli style evokes church bells and features a single tubular bell.",
+        "timestamp": "18:17"
+      },
+      {
+        "artist": "Survivor",
+        "name": "Eye of the Tiger",
+        "spotify": {
+          "id": "2HHtWyy5CgaQbC7XSoOb0e",
+          "url": "https://open.spotify.com/track/2HHtWyy5CgaQbC7XSoOb0e",
+          "name": "Eye of the Tiger",
+          "artists": [
+            {
+              "id": "26bcq2nyj5GB7uRr558iQg",
+              "name": "Survivor"
+            }
+          ],
+          "released": "1982",
+          "image": "4e2755e7a96ec5e062c76aac",
+          "isrc": "USVR19300001",
+          "duration_ms": 243773
+        },
+        "chosen_by": "Segun Akinola",
+        "connection": "Made famous by its use in a film (\"Rocky III\"), as \"Tubular Bells\" was by \"The Exorcist\".",
+        "timestamp": "26:43"
+      },
+      {
+        "artist": "David Lang",
+        "name": "Symphony for Broken Instruments",
+        "spotify": null,
+        "chosen_by": "Anna Phoebe",
+        "connection": "Broken instruments; the guitar on \"Eye of the Tiger\" was repaired with glue and gaffer tape.",
+        "timestamp": "32:51"
+      }
+    ],
+    "series": 19,
+    "episode": 1,
+    "name": "Claire Wickes and Segun Akinola launch a brand new series",
+    "duration_seconds": 2566,
+    "released": "2026-11-06T20:00:00+00:00",
+    "description": "Segun Akinola and Claire Wickes add the first five tracks in the brand new series.",
+    "image": "p0m2t813.jpg"
   }
 ]

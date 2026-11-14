@@ -46,6 +46,11 @@
         <dt>Tracks</dt>
         <dd>{{ episode.track_count }}</dd>
 
+        {% if episode.overall_number is not none %}
+            <dt>Episode overall</dt>
+            <dd>{{ episode.overall_number }}</dd>
+        {% endif %}
+
         <dt>Link</dt>
         <dd>
             <a href="{{ episode.url }}" target="_blank" rel="noopener">Episode page on BBC Programmes</a>

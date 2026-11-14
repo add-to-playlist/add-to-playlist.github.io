@@ -40,8 +40,8 @@ class SeriesCollection:
     def _parse(self, series: list[str | None], episodes: list[dict[str, Any]]):
         grouped: defaultdict[int, list[Episode]] = defaultdict(list)
 
-        for item in episodes:
-            episode = Episode.from_dict(item)
+        for overall_number, item in enumerate(episodes, start=1):
+            episode = Episode.from_dict(item, overall_number=overall_number)
             grouped[episode.series].append(episode)
             self.episodes.append(episode)
 
@@ -127,11 +127,13 @@ class Episode:
     image: str
     is_standalone: bool = False
     comments: str | None = None
+    overall_number: int | None = None
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]):
+    def from_dict(cls, data: dict[str, Any], overall_number: int | None = None):
         """Build from raw JSON. Keys not listed here are ignored."""
         return cls(
+            overall_number=overall_number,
             id=data["id"],
             url=data["url"],
             playlist_tracks=[

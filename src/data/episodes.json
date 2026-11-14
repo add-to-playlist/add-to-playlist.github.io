@@ -17690,5 +17690,129 @@
     "released": "2026-11-06T20:00:00+00:00",
     "description": "Segun Akinola and Claire Wickes add the first five tracks in the brand new series.",
     "image": "p0m2t813.jpg"
+  },
+  {
+    "id": "m00342lq",
+    "url": "https://www.bbc.co.uk/programmes/m00342lq",
+    "broadcast": "2026-11-13T19:15:00+00:00",
+    "playlist_tracks": [
+      {
+        "artist": "Quincy Jones",
+        "name": "It's Caper Time (The Self Preservation Society)",
+        "spotify": {
+          "id": "3apGZ4PZ6Od0vB2ygXWqz7",
+          "url": "https://open.spotify.com/track/3apGZ4PZ6Od0vB2ygXWqz7",
+          "name": "It's Caper Time (The Self Preservation Society) - From \"The Italian Job\" Soundtrack",
+          "artists": [
+            {
+              "id": "3rxIQc9kWT6Ueg4BhnOwRK",
+              "name": "Quincy Jones"
+            }
+          ],
+          "released": "1969-01-01",
+          "image": "eb10888830c8f4da1541e512",
+          "isrc": "USMC10300467",
+          "duration_ms": 193026
+        },
+        "chosen_by": "Jeffrey Boakye",
+        "connection": "Michael Caine stars as an aging composer in the film \"Youth\", which features David Lang's Oscar-nominated song \"Simple Song Number 3\"; Caine also stars in \"The Italian Job\", whose soundtrack includes this Quincy Jones piece.",
+        "timestamp": "04:37"
+      },
+      {
+        "artist": "Nadia Boulanger",
+        "name": "Trois Pi\u00e8ces: I",
+        "spotify": {
+          "id": "46pwcjpPmYbkjgzUO1siir",
+          "url": "https://open.spotify.com/track/46pwcjpPmYbkjgzUO1siir",
+          "name": "Trois Pieces: I.",
+          "artists": [
+            {
+              "id": "1vfC2bld90kx966JTCSwf7",
+              "name": "Nadia Boulanger"
+            }
+          ],
+          "released": "2010-11-15",
+          "image": "73f5877d4042c32eeb383f8e",
+          "isrc": "DEE861001508",
+          "duration_ms": 167826
+        },
+        "chosen_by": "Amy Harman",
+        "connection": "Nadia Boulanger taught Quincy Jones composition; she was also a composer herself, and this is the first of her \"Trois Pi\u00e8ces\".",
+        "timestamp": "12:19"
+      },
+      {
+        "artist": "Lieder Opus 1, No 1, by Fanny Mendelssohn",
+        "name": "Schwanenlied (Swan Song)",
+        "spotify": {
+          "id": "5D8olGrsMj9xiNvM0VKPzo",
+          "url": "https://open.spotify.com/track/5D8olGrsMj9xiNvM0VKPzo",
+          "name": "6 Lieder, Op. 1: No. 1, Schwanenlied",
+          "artists": [
+            {
+              "id": "2Wj0NreQeOfrGxnPIaLcCi",
+              "name": "Fanny Mendelssohn"
+            }
+          ],
+          "released": "2000-01-01",
+          "image": "affe0a6e594c014cdfab3248",
+          "isrc": "GBAJY0011010",
+          "duration_ms": 167840
+        },
+        "chosen_by": "Lloyd Coleman",
+        "connection": "Musical siblings: Nadia and Lili Boulanger parallel Felix and Fanny Mendelssohn.",
+        "timestamp": "19:26"
+      },
+      {
+        "artist": "David Bowie",
+        "name": "The Wedding",
+        "spotify": {
+          "id": "5DNrdFJHc8ST4d9eP971Su",
+          "url": "https://open.spotify.com/track/5DNrdFJHc8ST4d9eP971Su",
+          "name": "The Wedding - 2021 Remaster",
+          "artists": [
+            {
+              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
+              "name": "David Bowie"
+            }
+          ],
+          "released": "1993-04-05",
+          "image": "7e1a936f44c598adc3da815b",
+          "isrc": "USJT12000013",
+          "duration_ms": 307300
+        },
+        "chosen_by": "Anna Phoebe",
+        "connection": "Fanny Mendelssohn composed music for her own wedding; David Bowie wrote this piece for his wedding to Iman.",
+        "timestamp": "27:00"
+      },
+      {
+        "artist": "Laurie Holloway",
+        "name": "Blind Date",
+        "spotify": {
+          "id": "1w3yYGHvkXVl037QhRm4ym",
+          "url": "https://open.spotify.com/track/1w3yYGHvkXVl037QhRm4ym",
+          "name": "Theme - From \"Blind Date\"",
+          "artists": [
+            {
+              "id": "79mMCnXkhmhD9pe4LTnogH",
+              "name": "Laurie Holloway"
+            }
+          ],
+          "released": "2012-04-09",
+          "image": "9159eb41e80b81f16c0b5894",
+          "isrc": "GBAJC1100209",
+          "duration_ms": 62786
+        },
+        "chosen_by": "Jeffrey Boakye",
+        "connection": "David Bowie and Iman met on a blind date.",
+        "timestamp": "33:38"
+      }
+    ],
+    "series": 19,
+    "episode": 2,
+    "name": "Amy Harman and Lloyd Coleman kick off with a caper",
+    "duration_seconds": 2551,
+    "released": "2026-11-13T20:00:00+00:00",
+    "description": "Bassoonist Amy Harman and clarinettist and composer Lloyd Coleman add five more tracks.",
+    "image": "p0m2t813.jpg"
   }
 ]

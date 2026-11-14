@@ -98,6 +98,9 @@
 .track-artists {
     color: var(--pico-muted-color);
 }
+blockquote p:last-child {
+    margin-bottom: 0;
+}
 .note {
     border-left: 0.25rem solid var(--pico-muted-border-color);
     padding-left: 0.75rem;
